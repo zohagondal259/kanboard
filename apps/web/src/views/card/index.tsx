@@ -40,6 +40,7 @@ import ListSelector from "./components/ListSelector";
 import MemberSelector from "./components/MemberSelector";
 import { NewChecklistForm } from "./components/NewChecklistForm";
 import NewCommentForm from "./components/NewCommentForm";
+import PlanDocPanel from "./components/PlanDocPanel";
 
 interface FormValues {
   cardId: string;
@@ -475,6 +476,9 @@ export default function CardPage({ isTemplate }: { isTemplate?: boolean }) {
                         </div>
                       )}
                     </>
+                  )}
+                  {!isTemplate && cardId && (
+                    <PlanDocPanel cardPublicId={cardId} />
                   )}
                   <div className="border-t-[1px] border-light-300 pt-12 dark:border-dark-300">
                     <h2 className="text-md pb-4 font-medium text-light-1000 dark:text-dark-1000">

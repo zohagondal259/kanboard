@@ -23,8 +23,7 @@ export function EditMemberPermissionsModal() {
       memberPublicId: entityId,
     },
     {
-      enabled:
-        modalContentType === "EDIT_MEMBER_PERMISSIONS" && !!entityId,
+      enabled: modalContentType === "EDIT_MEMBER_PERMISSIONS" && !!entityId,
     },
   );
 
@@ -151,6 +150,8 @@ export function EditMemberPermissionsModal() {
     "member:invite": t`Can invite members`,
     "member:edit": t`Can edit member roles and permissions`,
     "member:remove": t`Can remove members`,
+
+    "plandoc:view": t`Can view plan docs`,
   };
 
   return (
@@ -180,7 +181,7 @@ export function EditMemberPermissionsModal() {
             {t`Loading permissions...`}
           </p>
         ) : (
-          <div className="max-h-80 pb-4 space-y-3 overflow-y-auto pr-1">
+          <div className="max-h-80 space-y-3 overflow-y-auto pb-4 pr-1">
             {Object.values(permissionCategories).map((category, index) => (
               <div
                 key={category.label}
@@ -249,5 +250,3 @@ export function EditMemberPermissionsModal() {
     </div>
   );
 }
-
-

@@ -253,6 +253,20 @@
       "when": 1788209875712,
       "tag": "20260831205755_AddCardRelationIndexes",
       "breakpoints": true
+    },
+    {
+      "idx": 36,
+      "version": "7",
+      "when": 1789749333430,
+      "tag": "20260918163533_AddCardPlanDocs",
+      "breakpoints": true
+    },
+    {
+      "idx": 37,
+      "version": "7",
+      "when": 1789749334122,
+      "tag": "20260918163534_GrantPlanDocViewPermission",
+      "breakpoints": true
     }
   ]
 }

@@ -14,6 +14,7 @@ export const permissionResources = [
   "card",
   "comment",
   "member",
+  "plandoc",
 ] as const;
 export type PermissionResource = (typeof permissionResources)[number];
 
@@ -42,6 +43,7 @@ export const allPermissions = [
   "member:invite",
   "member:edit",
   "member:remove",
+  "plandoc:view",
 ] as const;
 
 export type Permission = (typeof allPermissions)[number];
@@ -74,6 +76,7 @@ export const defaultRolePermissions: Record<Role, readonly Permission[]> = {
     "comment:edit",
     "comment:delete",
     "member:view",
+    "plandoc:view",
   ],
 
   guest: [
@@ -85,7 +88,6 @@ export const defaultRolePermissions: Record<Role, readonly Permission[]> = {
     "member:view",
   ],
 } as const;
-
 
 export const permissionCategories = {
   workspace: {
@@ -142,6 +144,10 @@ export const permissionCategories = {
       "member:remove",
     ] as const,
   },
+  plandoc: {
+    label: "Plan docs",
+    permissions: ["plandoc:view"] as const,
+  },
 } as const;
 
 export function getDefaultPermissions(role: Role): readonly Permission[] {
@@ -162,4 +168,3 @@ export function hasPermissionInDefaults(
 ): boolean {
   return defaultRolePermissions[role].includes(permission);
 }
-

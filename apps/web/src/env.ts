@@ -16,6 +16,8 @@ export const env = createEnv({
   server: {
     KAN_ADMIN_API_KEY: z.string().optional(),
     WORKSPACE_CREATOR_EMAILS: z.string().optional(),
+    PLAN_DOCS_REPOS: z.string().optional(),
+    PLAN_DOCS_GITHUB_TOKEN: z.string().optional(),
     BETTER_AUTH_SECRET: z.string(),
     BETTER_AUTH_TRUSTED_ORIGINS: z
       .string()
