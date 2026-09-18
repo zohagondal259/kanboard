@@ -62,7 +62,8 @@ export default function BoardsPage({ isTemplate }: { isTemplate?: boolean }) {
           <h1 className="font-bold tracking-tight text-neutral-900 dark:text-dark-1000 sm:text-[1.2rem]">
             {isTemplate ? t`Templates` : t`Boards`}
           </h1>
-          <div className="flex gap-2">
+          {/* Guests only view boards: hide the actions instead of disabling them. */}
+          <div className={workspace.role === "guest" ? "hidden" : "flex gap-2"}>
             {!isTemplate && (
               <Tooltip
                 content={

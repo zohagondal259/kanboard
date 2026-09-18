@@ -12,6 +12,14 @@ export interface Template {
 
 export const getTemplates = (): Template[] => [
   {
+    // List names are plain strings on purpose: the docs-to-board sync matches
+    // columns by these exact names, so they must not vary with the locale.
+    id: "client-project",
+    name: t`Client Project`,
+    lists: ["Next", "In progress", "Blocked on client", "Done"],
+    labels: ["Bug", "Feature", "Polish", "P1"],
+  },
+  {
     id: "basic",
     name: t`Basic Kanban`,
     lists: [t`To Do`, t`In Progress`, t`Done`],
@@ -32,7 +40,14 @@ export const getTemplates = (): Template[] => [
   {
     id: "roadmap-extended",
     name: t`Extended Roadmap`,
-    lists: [t`Requested`, t`Under Review`, t`Planned`, t`In Progress`, t`Done`, t`Rejected`],
+    lists: [
+      t`Requested`,
+      t`Under Review`,
+      t`Planned`,
+      t`In Progress`,
+      t`Done`,
+      t`Rejected`,
+    ],
     labels: [t`Feature`, t`Enhancement`, t`Critical`, t`Documentation`],
   },
   {

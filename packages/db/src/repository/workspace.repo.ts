@@ -86,6 +86,9 @@ export const create = async (
       ...(workspaceInput.plan && { plan: workspaceInput.plan }),
       cardPrefix: generateWorkspacePrefix(workspaceInput.name),
       cardCounter: 0,
+      // Off by default: a workspace shared with a client as a guest must not
+      // reveal the team's email addresses. Admins can turn it on in settings.
+      showEmailsToMembers: false,
     })
     .returning({
       id: workspaces.id,
@@ -385,7 +388,9 @@ export const isWorkspaceSlugAvailable = async (
         // so no other workspace may claim it as a custom slug either.
         and(
           eq(workspaces.publicId, workspaceSlug),
-          excludeWorkspaceId ? ne(workspaces.id, excludeWorkspaceId) : undefined,
+          excludeWorkspaceId
+            ? ne(workspaces.id, excludeWorkspaceId)
+            : undefined,
         ),
       ),
     ),
