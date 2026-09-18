@@ -60,13 +60,12 @@
       ],
       [
         "src/views/card/index.tsx",
-        326
+        327
       ]
     ],
     "translation": "{0} | {1}"
   },
   "baIPh3": {
-    "translation": "",
     "message": "{0} cards due",
     "placeholders": {
       "0": [
@@ -79,7 +78,8 @@
         "src/views/board/components/CalendarView.tsx",
         364
       ]
-    ]
+    ],
+    "translation": ""
   },
   "mU+M00": {
     "message": "{0} has been added to your favorites.",
@@ -191,7 +191,6 @@
     "obsolete": true
   },
   "h/eDNV": {
-    "translation": "",
     "message": "+ {overflowCount} more",
     "placeholders": {
       "overflowCount": [
@@ -204,7 +203,8 @@
         "src/views/board/components/CalendarView.tsx",
         318
       ]
-    ]
+    ],
+    "translation": ""
   },
   "be30i9": {
     "message": "$0",
@@ -299,7 +299,6 @@
     "translation": "14 dages gratis prøveperiode · Skift abonnement eller opsig når som helst"
   },
   "31OyXI": {
-    "translation": "",
     "message": "14-day free trial · cancel anytime",
     "placeholders": {},
     "comments": [],
@@ -308,7 +307,8 @@
         "src/views/board/components/CalendarView.tsx",
         454
       ]
-    ]
+    ],
+    "translation": ""
   },
   "4obmDr": {
     "message": "404 - Page Not Found | kan.bn",
@@ -433,7 +433,7 @@
     "origin": [
       [
         "src/views/card/index.tsx",
-        481
+        485
       ],
       [
         "src/views/public/board/CardModal.tsx",
@@ -1405,6 +1405,18 @@
     ],
     "translation": "Tilbage"
   },
+  "9krCfL": {
+    "translation": "",
+    "message": "Back to card",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/planDoc/index.tsx",
+        50
+      ]
+    ]
+  },
   "KNKCTb": {
     "message": "Backlog",
     "placeholders": {},
@@ -1607,7 +1619,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        326
+        327
       ],
       [
         "src/views/public/board/index.tsx",
@@ -1886,7 +1898,6 @@
     "translation": "Fejlrapport"
   },
   "AjVXBS": {
-    "translation": "",
     "message": "Calendar",
     "placeholders": {},
     "comments": [],
@@ -1895,7 +1906,8 @@
         "src/views/board/components/ViewToggle.tsx",
         42
       ]
-    ]
+    ],
+    "translation": ""
   },
   "t6FvJH": {
     "message": "Can add comments",
@@ -1904,7 +1916,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        146
+        145
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -1920,7 +1932,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        131
+        130
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -1936,7 +1948,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        141
+        140
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -1952,7 +1964,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        136
+        135
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -1968,7 +1980,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        133
+        132
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -1984,7 +1996,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        143
+        142
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2000,7 +2012,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        148
+        147
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2016,7 +2028,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        138
+        137
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2032,7 +2044,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        127
+        126
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2048,7 +2060,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        132
+        131
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2064,7 +2076,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        142
+        141
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2080,7 +2092,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        147
+        146
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2096,7 +2108,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        137
+        136
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2112,7 +2124,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        152
+        151
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2128,7 +2140,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        126
+        125
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2144,7 +2156,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        151
+        150
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2160,7 +2172,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        128
+        127
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2176,7 +2188,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        153
+        152
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2192,7 +2204,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        130
+        129
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2208,7 +2220,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        140
+        139
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2224,7 +2236,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        145
+        144
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2240,7 +2252,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        135
+        134
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2256,7 +2268,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        150
+        149
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2265,6 +2277,22 @@
     ],
     "translation": "Kan se medlemmer"
   },
+  "/NErqp": {
+    "translation": "",
+    "message": "Can view plan docs",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/members/components/EditMemberPermissionsModal.tsx",
+        154
+      ],
+      [
+        "src/views/settings/components/RolePermissions.tsx",
+        44
+      ]
+    ]
+  },
   "SNfg0e": {
     "message": "Can view workspace",
     "placeholders": {},
@@ -2272,7 +2300,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        125
+        124
       ],
       [
         "src/views/settings/components/RolePermissions.tsx",
@@ -2364,7 +2392,7 @@
     "origin": [
       [
         "src/views/card/index.tsx",
-        326
+        327
       ]
     ],
     "translation": "Kort"
@@ -2416,11 +2444,11 @@
     "origin": [
       [
         "src/views/card/index.tsx",
-        389
+        390
       ],
       [
         "src/views/card/index.tsx",
-        426
+        427
       ]
     ],
     "translation": "Kortet blev ikke fundet"
@@ -2704,15 +2732,15 @@
     "origin": [
       [
         "src/components/Dashboard.tsx",
-        281
+        292
       ],
       [
         "src/views/card/index.tsx",
-        380
+        381
       ],
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        172
+        173
       ],
       [
         "src/views/settings/components/NewApiKeyModal.tsx",
@@ -3414,7 +3442,7 @@
       ],
       [
         "src/components/WorkspaceMenu.tsx",
-        177
+        179
       ]
     ],
     "translation": "Opret arbejdsområde"
@@ -3853,7 +3881,7 @@
       ],
       [
         "src/views/settings/WorkspaceSettings.tsx",
-        85
+        86
       ],
       [
         "src/views/settings/WorkspaceSettings.tsx",
@@ -4181,7 +4209,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        154
+        155
       ]
     ],
     "translation": "Forfaldsdato"
@@ -4341,7 +4369,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        162
+        163
       ],
       [
         "src/views/members/index.tsx",
@@ -6291,7 +6319,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        134
+        135
       ]
     ],
     "translation": "Etiketter"
@@ -6489,6 +6517,18 @@
     ],
     "translation": "Link kopieret"
   },
+  "uRlDON": {
+    "translation": "",
+    "message": "Link plan doc",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        172
+      ]
+    ]
+  },
   "2BBAbc": {
     "message": "List",
     "placeholders": {},
@@ -6500,7 +6540,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        125
+        126
       ]
     ],
     "translation": "Liste"
@@ -6568,10 +6608,22 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        180
+        181
       ]
     ],
     "translation": "Indlæser rettigheder..."
+  },
+  "AK9kCO": {
+    "translation": "",
+    "message": "Loading plan doc...",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/planDoc/index.tsx",
+        66
+      ]
+    ]
   },
   "Z3FXyt": {
     "message": "Loading...",
@@ -6828,7 +6880,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        144
+        145
       ],
       [
         "src/views/members/index.tsx",
@@ -7069,7 +7121,6 @@
     "translation": "Brug for hjælp?"
   },
   "PSXKxs": {
-    "translation": "",
     "message": "Never lose track of what's due",
     "placeholders": {},
     "comments": [],
@@ -7078,7 +7129,8 @@
         "src/views/board/components/CalendarView.tsx",
         445
       ]
-    ]
+    ],
+    "translation": ""
   },
   "isRobC": {
     "message": "New",
@@ -7273,7 +7325,6 @@
     "translation": "Nyhedsbrev"
   },
   "g8JmSC": {
-    "translation": "",
     "message": "Next month",
     "placeholders": {},
     "comments": [],
@@ -7282,7 +7333,8 @@
         "src/views/board/components/CalendarView.tsx",
         186
       ]
-    ]
+    ],
+    "translation": ""
   },
   "HeFWjW": {
     "message": "Next Steps",
@@ -7349,7 +7401,6 @@
     "translation": "Ingen tavler fundet"
   },
   "WAQMrN": {
-    "translation": "",
     "message": "No cards due",
     "placeholders": {},
     "comments": [],
@@ -7358,7 +7409,8 @@
         "src/views/board/components/CalendarView.tsx",
         401
       ]
-    ]
+    ],
+    "translation": ""
   },
   "OpNhRn": {
     "message": "No credit card required",
@@ -7479,7 +7531,7 @@
     "origin": [
       [
         "src/views/settings/components/RolePermissions.tsx",
-        110
+        112
       ]
     ],
     "translation": "Der er endnu ikke fundet nogen roller for dette arbejdsområde."
@@ -7563,7 +7615,7 @@
     "origin": [
       [
         "src/views/settings/WorkspaceSettings.tsx",
-        88
+        89
       ]
     ],
     "translation": "Når du sletter dit arbejdsområde, kan du ikke gå tilbage. Denne handling kan ikke fortrydes."
@@ -7575,10 +7627,22 @@
     "origin": [
       [
         "src/components/WorkspaceMenu.tsx",
-        37
+        38
       ]
     ],
     "translation": "Åbn kommandomenu"
+  },
+  "i5m06o": {
+    "translation": "",
+    "message": "Open full plan doc",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        68
+      ]
+    ]
   },
   "cFQEU/": {
     "message": "Open keyboard shortcuts",
@@ -7723,7 +7787,7 @@
     "origin": [
       [
         "src/components/Dashboard.tsx",
-        271
+        282
       ]
     ],
     "translation": "Adgangskode allerede indstillet"
@@ -7799,6 +7863,18 @@
       ]
     ],
     "translation": "Adgangskoderne matcher ikke"
+  },
+  "YLiyuz": {
+    "translation": "",
+    "message": "Path, for example INPROGRESS_PLAN.md",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        163
+      ]
+    ]
   },
   "URAE3q": {
     "message": "Paused",
@@ -7895,7 +7971,7 @@
     "origin": [
       [
         "src/views/settings/components/RolePermissions.tsx",
-        119
+        121
       ]
     ],
     "translation": "Rettighed"
@@ -7919,7 +7995,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        80
+        79
       ]
     ],
     "translation": "Rettigheder nulstillet"
@@ -7931,11 +8007,11 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        34
+        33
       ],
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        57
+        56
       ]
     ],
     "translation": "Rettigheder opdateret"
@@ -7975,6 +8051,34 @@
       ]
     ],
     "translation": "Abonnement"
+  },
+  "gSdZqj": {
+    "translation": "",
+    "message": "Plan doc",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        61
+      ],
+      [
+        "src/views/planDoc/index.tsx",
+        42
+      ]
+    ]
+  },
+  "9bQGzZ": {
+    "translation": "",
+    "message": "Plan docs are not set up on this server.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        15
+      ]
+    ]
   },
   "Iqh0Uv": {
     "message": "Planned",
@@ -8235,11 +8339,11 @@
       ],
       [
         "src/views/card/index.tsx",
-        241
+        242
       ],
       [
         "src/views/card/index.tsx",
-        254
+        255
       ],
       [
         "src/views/members/components/DeleteMemberConfirmation.tsx",
@@ -8247,15 +8351,15 @@
       ],
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        42
+        41
       ],
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        65
+        64
       ],
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        93
+        92
       ],
       [
         "src/views/members/components/InviteMemberForm.tsx",
@@ -8377,7 +8481,6 @@
     "translation": "Placering på listen (0 = først, lad feltet være tomt for sidst)"
   },
   "1xwZj/": {
-    "translation": "",
     "message": "Previous month",
     "placeholders": {},
     "comments": [],
@@ -8386,7 +8489,8 @@
         "src/views/board/components/CalendarView.tsx",
         169
       ]
-    ]
+    ],
+    "translation": ""
   },
   "aHCEmh": {
     "message": "Pricing",
@@ -8840,6 +8944,18 @@
     ],
     "translation": "omdøbte tjeklistepunktet til <0>{0}</0>"
   },
+  "3MRBZZ": {
+    "translation": "",
+    "message": "Repository, for example owner/docs",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        158
+      ]
+    ]
+  },
   "Yx0Ud8": {
     "message": "Requested",
     "placeholders": {},
@@ -8875,7 +8991,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        245
+        246
       ]
     ],
     "translation": "Nulstil til rollens standardindstillinger"
@@ -9076,7 +9192,7 @@
     "origin": [
       [
         "src/components/WorkspaceMenu.tsx",
-        102
+        103
       ]
     ],
     "translation": ""
@@ -9158,7 +9274,6 @@
     "translation": "Sikkerhed"
   },
   "iL+dpm": {
-    "translation": "",
     "message": "See all your cards across the month, then drag and drop to reschedule. Available on paid plans.",
     "placeholders": {},
     "comments": [],
@@ -9167,7 +9282,8 @@
         "src/views/board/components/CalendarView.tsx",
         448
       ]
-    ]
+    ],
+    "translation": ""
   },
   "K3iLeO": {
     "message": "See what our users are saying about Kan",
@@ -9509,6 +9625,25 @@
     ],
     "translation": "Genveje"
   },
+  "jVwuHT": {
+    "translation": "",
+    "message": "Showing the newest {0} of {1} STATE entries.",
+    "placeholders": {
+      "0": [
+        "data.summary.stateEntries.length"
+      ],
+      "1": [
+        "data.summary.totalStateEntries"
+      ]
+    },
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        108
+      ]
+    ]
+  },
   "5lWFkC": {
     "message": "Sign in",
     "placeholders": {},
@@ -9809,15 +9944,15 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        228
+        235
       ],
       [
         "src/components/SideNavigation.tsx",
-        229
+        236
       ],
       [
         "src/components/SideNavigation.tsx",
-        239
+        246
       ]
     ],
     "translation": "Start gratis prøveperiode"
@@ -10325,11 +10460,11 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        35
+        34
       ],
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        58
+        57
       ]
     ],
     "translation": "Medlemmets rettigheder er blevet opdateret."
@@ -10369,6 +10504,54 @@
       ]
     ],
     "translation": "Siden, du leder efter, findes ikke eller er blevet flyttet."
+  },
+  "fI89nT": {
+    "translation": "",
+    "message": "The plan doc could not be loaded. Try again shortly.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        26
+      ]
+    ]
+  },
+  "goPgue": {
+    "translation": "",
+    "message": "The plan doc is too large to display.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        21
+      ]
+    ]
+  },
+  "rhpzJK": {
+    "translation": "",
+    "message": "The plan doc link is not valid.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        24
+      ]
+    ]
+  },
+  "M1Q8Pv": {
+    "translation": "",
+    "message": "The plan doc was not found. It may have been moved or not pushed yet.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        19
+      ]
+    ]
   },
   "fQCrjt": {
     "message": "The visibility of your board has been set to {0}.",
@@ -10474,6 +10657,18 @@
     ],
     "translation": "Denne tavle-URL er allerede taget"
   },
+  "gKJ9z4": {
+    "translation": "",
+    "message": "This doc has no STATE section yet.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        102
+      ]
+    ]
+  },
   "mTwGOf": {
     "message": "This invitation link is invalid or has expired.",
     "placeholders": {},
@@ -10493,10 +10688,22 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        81
+        80
       ]
     ],
     "translation": "Dette medlems rettigheder er nulstillet til standardindstillingerne for rollen."
+  },
+  "iFSqoQ": {
+    "translation": "",
+    "message": "This repository is not allowed for plan docs.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        17
+      ]
+    ]
   },
   "HQVm6e": {
     "message": "This URL has already been taken",
@@ -10659,7 +10866,6 @@
     "translation": "Opgaver"
   },
   "ecUA8p": {
-    "translation": "",
     "message": "Today",
     "placeholders": {},
     "comments": [],
@@ -10668,7 +10874,8 @@
         "src/views/board/components/CalendarView.tsx",
         181
       ]
-    ]
+    ],
+    "translation": ""
   },
   "4gAX8s": {
     "message": "Toggle menu",
@@ -10801,7 +11008,7 @@
     "origin": [
       [
         "src/views/card/index.tsx",
-        253
+        254
       ]
     ],
     "translation": "Kunne ikke tilføje etiket"
@@ -11022,6 +11229,18 @@
     ],
     "translation": "Kunne ikke duplikere kort"
   },
+  "CzEx2k": {
+    "translation": "",
+    "message": "Unable to link the plan doc",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        137
+      ]
+    ]
+  },
   "d196/6": {
     "message": "Unable to move board",
     "placeholders": {},
@@ -11077,7 +11296,7 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        92
+        91
       ]
     ],
     "translation": "Kunne ikke nulstille rettigheder"
@@ -11121,6 +11340,18 @@
       ]
     ],
     "translation": "Kunne ikke teste webhook"
+  },
+  "G9NvBP": {
+    "translation": "",
+    "message": "Unable to unlink the plan doc",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        187
+      ]
+    ]
   },
   "T7Mywq": {
     "message": "Unable to update board",
@@ -11169,7 +11400,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        240
+        241
       ]
     ],
     "translation": "Kunne ikke opdatere kort"
@@ -11273,11 +11504,11 @@
     "origin": [
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        41
+        40
       ],
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
-        64
+        63
       ]
     ],
     "translation": "Kunne ikke opdatere rettigheder"
@@ -11531,6 +11762,18 @@
     ],
     "translation": "Ubegrænset antal pladser og avancerede funktioner til voksende teams.",
     "obsolete": true
+  },
+  "egi434": {
+    "translation": "",
+    "message": "Unlink plan doc",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        200
+      ]
+    ]
   },
   "EkH9pt": {
     "message": "Update",
@@ -12575,6 +12818,18 @@
     ],
     "translation": "Du kan selvhoste ved at følge vejledningen i vores <0>repo</0>."
   },
+  "nfQzUA": {
+    "translation": "",
+    "message": "You do not have access to plan docs.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/planDoc/index.tsx",
+        33
+      ]
+    ]
+  },
   "tUL16u": {
     "message": "You don't have any other workspaces to move this board to.",
     "placeholders": {},
@@ -12718,7 +12973,7 @@
     "origin": [
       [
         "src/components/Dashboard.tsx",
-        273
+        284
       ]
     ],
     "translation": "Din konto har allerede en adgangskode. Du kan ændre den under dine kontoindstillinger."
