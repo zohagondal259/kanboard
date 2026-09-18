@@ -1156,7 +1156,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        75
+        90
       ]
     ],
     "translation": "Applicants"
@@ -1168,7 +1168,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        46
+        61
       ]
     ],
     "translation": "Approval"
@@ -1384,7 +1384,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        59
+        74
       ]
     ],
     "translation": "Awaiting Customer"
@@ -1406,7 +1406,6 @@
     "translation": "Back"
   },
   "9krCfL": {
-    "translation": "Back to card",
     "message": "Back to card",
     "placeholders": {},
     "comments": [],
@@ -1415,7 +1414,8 @@
         "src/views/planDoc/index.tsx",
         50
       ]
-    ]
+    ],
+    "translation": "Back to card"
   },
   "KNKCTb": {
     "message": "Backlog",
@@ -1424,7 +1424,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        23
+        31
       ]
     ],
     "translation": "Backlog"
@@ -1436,7 +1436,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        16
+        24
       ]
     ],
     "translation": "Basic Kanban"
@@ -1448,7 +1448,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        28
+        36
       ]
     ],
     "translation": "Basic Roadmap"
@@ -1575,7 +1575,7 @@
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        68
+        83
       ],
       [
         "src/views/settings/BillingSettings.tsx",
@@ -1603,7 +1603,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        50
+        65
       ]
     ],
     "translation": "Blog Post"
@@ -1868,7 +1868,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        42
+        57
       ]
     ],
     "translation": "Brainstorming"
@@ -1880,7 +1880,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        24
+        32
       ]
     ],
     "translation": "Bug"
@@ -1892,7 +1892,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        64
+        79
       ]
     ],
     "translation": "Bug Report"
@@ -2278,7 +2278,6 @@
     "translation": "Can view members"
   },
   "/NErqp": {
-    "translation": "Can view plan docs",
     "message": "Can view plan docs",
     "placeholders": {},
     "comments": [],
@@ -2291,7 +2290,8 @@
         "src/views/settings/components/RolePermissions.tsx",
         44
       ]
-    ]
+    ],
+    "translation": "Can view plan docs"
   },
   "SNfg0e": {
     "message": "Can view workspace",
@@ -2725,6 +2725,18 @@
     ],
     "translation": "Click on the link we've sent to {magicLinkRecipient} to sign in."
   },
+  "qUShdP": {
+    "translation": "Client Project",
+    "message": "Client Project",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/boards/components/TemplateBoards.tsx",
+        18
+      ]
+    ]
+  },
   "yz7wBu": {
     "message": "Close",
     "placeholders": {},
@@ -2756,7 +2768,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        23
+        31
       ]
     ],
     "translation": "Code Review"
@@ -2844,7 +2856,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        94
+        109
       ]
     ],
     "translation": "Complete"
@@ -3078,7 +3090,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        40
+        55
       ]
     ],
     "translation": "Content Creation"
@@ -3491,15 +3503,15 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        24
+        32
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        30
+        38
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        36
+        51
       ]
     ],
     "translation": "Critical"
@@ -3691,7 +3703,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        54
+        69
       ]
     ],
     "translation": "Customer Support"
@@ -3979,7 +3991,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        45
+        60
       ]
     ],
     "translation": "Design"
@@ -4144,15 +4156,15 @@
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        24
+        32
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        30
+        38
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        36
+        51
       ],
       [
         "src/views/home/components/Footer.tsx",
@@ -4196,19 +4208,15 @@
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        17
+        25
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        23
+        31
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        29
-      ],
-      [
-        "src/views/boards/components/TemplateBoards.tsx",
-        35
+        37
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
@@ -4216,7 +4224,11 @@
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        61
+        63
+      ],
+      [
+        "src/views/boards/components/TemplateBoards.tsx",
+        76
       ]
     ],
     "translation": "Done"
@@ -4460,7 +4472,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        44
+        59
       ]
     ],
     "translation": "Editing"
@@ -4560,15 +4572,15 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        24
+        32
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        30
+        38
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        36
+        51
       ]
     ],
     "translation": "Enhancement"
@@ -4978,7 +4990,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        91
+        106
       ]
     ],
     "translation": "Execution"
@@ -4990,7 +5002,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        34
+        42
       ]
     ],
     "translation": "Extended Roadmap"
@@ -5162,15 +5174,15 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        24
+        32
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        30
+        38
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        36
+        51
       ]
     ],
     "translation": "Feature"
@@ -5182,7 +5194,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        65
+        80
       ]
     ],
     "translation": "Feature Request"
@@ -5406,7 +5418,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        82
+        97
       ]
     ],
     "translation": "Full-time"
@@ -5418,7 +5430,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        96
+        111
       ]
     ],
     "translation": "Fun"
@@ -5746,7 +5758,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        18
+        26
       ]
     ],
     "translation": "High Priority"
@@ -5758,7 +5770,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        80
+        95
       ]
     ],
     "translation": "Hired"
@@ -5902,7 +5914,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        88
+        103
       ]
     ],
     "translation": "Ideas"
@@ -5926,7 +5938,7 @@
     "origin": [
       [
         "src/views/boards/index.tsx",
-        83
+        84
       ]
     ],
     "translation": "Import"
@@ -5982,7 +5994,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        96
+        111
       ]
     ],
     "translation": "Important"
@@ -6042,23 +6054,23 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        17
+        25
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        23
+        31
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        29
+        37
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        35
+        47
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        58
+        73
       ]
     ],
     "translation": "In Progress"
@@ -6122,7 +6134,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        77
+        92
       ]
     ],
     "translation": "Interviewing"
@@ -6304,7 +6316,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        82
+        97
       ]
     ],
     "translation": "Junior"
@@ -6494,7 +6506,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        96
+        111
       ]
     ],
     "translation": "Learning"
@@ -6596,7 +6608,6 @@
     "translation": "Link copied"
   },
   "uRlDON": {
-    "translation": "Link plan doc",
     "message": "Link plan doc",
     "placeholders": {},
     "comments": [],
@@ -6605,7 +6616,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         172
       ]
-    ]
+    ],
+    "translation": "Link plan doc"
   },
   "2BBAbc": {
     "message": "List",
@@ -6692,7 +6704,6 @@
     "translation": "Loading permissions..."
   },
   "AK9kCO": {
-    "translation": "Loading plan doc...",
     "message": "Loading plan doc...",
     "placeholders": {},
     "comments": [],
@@ -6701,7 +6712,8 @@
         "src/views/planDoc/index.tsx",
         66
       ]
-    ]
+    ],
+    "translation": "Loading plan doc..."
   },
   "Z3FXyt": {
     "message": "Loading...",
@@ -6746,7 +6758,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        96
+        111
       ]
     ],
     "translation": "Long-term"
@@ -6770,7 +6782,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        18
+        26
       ]
     ],
     "translation": "Low Priority"
@@ -6874,7 +6886,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        18
+        26
       ]
     ],
     "translation": "Medium Priority"
@@ -7217,7 +7229,7 @@
     "origin": [
       [
         "src/views/boards/index.tsx",
-        105
+        106
       ],
       [
         "src/views/home/components/Features.tsx",
@@ -7361,7 +7373,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        56
+        71
       ]
     ],
     "translation": "New Ticket"
@@ -7397,7 +7409,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        50
+        65
       ]
     ],
     "translation": "Newsletter"
@@ -7421,7 +7433,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        93
+        108
       ]
     ],
     "translation": "Next Steps"
@@ -7633,7 +7645,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        78
+        93
       ]
     ],
     "translation": "Offer"
@@ -7669,7 +7681,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        79
+        94
       ]
     ],
     "translation": "Onboarding"
@@ -7711,7 +7723,6 @@
     "translation": "Open command menu"
   },
   "i5m06o": {
-    "translation": "Open full plan doc",
     "message": "Open full plan doc",
     "placeholders": {},
     "comments": [],
@@ -7720,7 +7731,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         68
       ]
-    ]
+    ],
+    "translation": "Open full plan doc"
   },
   "cFQEU/": {
     "message": "Open keyboard shortcuts",
@@ -7853,7 +7865,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        82
+        97
       ]
     ],
     "translation": "Part-time"
@@ -7943,7 +7955,6 @@
     "translation": "Passwords do not match"
   },
   "YLiyuz": {
-    "translation": "Path, for example INPROGRESS_PLAN.md",
     "message": "Path, for example INPROGRESS_PLAN.md",
     "placeholders": {},
     "comments": [],
@@ -7952,7 +7963,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         163
       ]
-    ]
+    ],
+    "translation": "Path, for example INPROGRESS_PLAN.md"
   },
   "URAE3q": {
     "message": "Paused",
@@ -8101,7 +8113,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        86
+        101
       ]
     ],
     "translation": "Personal Project"
@@ -8131,7 +8143,6 @@
     "translation": "Plan"
   },
   "gSdZqj": {
-    "translation": "Plan doc",
     "message": "Plan doc",
     "placeholders": {},
     "comments": [],
@@ -8144,10 +8155,10 @@
         "src/views/planDoc/index.tsx",
         42
       ]
-    ]
+    ],
+    "translation": "Plan doc"
   },
   "9bQGzZ": {
-    "translation": "Plan docs are not set up on this server.",
     "message": "Plan docs are not set up on this server.",
     "placeholders": {},
     "comments": [],
@@ -8156,7 +8167,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         15
       ]
-    ]
+    ],
+    "translation": "Plan docs are not set up on this server."
   },
   "Iqh0Uv": {
     "message": "Planned",
@@ -8165,11 +8177,11 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        29
+        37
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        35
+        46
       ]
     ],
     "translation": "Planned"
@@ -8181,7 +8193,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        90
+        105
       ]
     ],
     "translation": "Planning"
@@ -8738,7 +8750,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        47
+        62
       ]
     ],
     "translation": "Publishing"
@@ -8750,7 +8762,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        66
+        81
       ]
     ],
     "translation": "Question"
@@ -8774,7 +8786,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        96
+        111
       ]
     ],
     "translation": "Quick Win"
@@ -8786,7 +8798,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        73
+        88
       ]
     ],
     "translation": "Recruitment"
@@ -8798,7 +8810,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        35
+        49
       ]
     ],
     "translation": "Rejected"
@@ -8810,7 +8822,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        82
+        97
       ]
     ],
     "translation": "Remote"
@@ -9023,7 +9035,6 @@
     "translation": "renamed checklist item to <0>{0}</0>"
   },
   "3MRBZZ": {
-    "translation": "Repository, for example owner/docs",
     "message": "Repository, for example owner/docs",
     "placeholders": {},
     "comments": [],
@@ -9032,7 +9043,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         158
       ]
-    ]
+    ],
+    "translation": "Repository, for example owner/docs"
   },
   "Yx0Ud8": {
     "message": "Requested",
@@ -9041,11 +9053,11 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        29
+        37
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        35
+        44
       ]
     ],
     "translation": "Requested"
@@ -9057,7 +9069,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        89
+        104
       ]
     ],
     "translation": "Research"
@@ -9081,7 +9093,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        60
+        75
       ]
     ],
     "translation": "Resolution"
@@ -9105,7 +9117,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        92
+        107
       ]
     ],
     "translation": "Review"
@@ -9258,7 +9270,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        76
+        91
       ]
     ],
     "translation": "Screening"
@@ -9506,7 +9518,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        82
+        97
       ]
     ],
     "translation": "Senior"
@@ -9704,7 +9716,6 @@
     "translation": "Shortcuts"
   },
   "jVwuHT": {
-    "translation": "Showing the newest {0} of {1} STATE entries.",
     "message": "Showing the newest {0} of {1} STATE entries.",
     "placeholders": {
       "0": [
@@ -9720,7 +9731,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         108
       ]
-    ]
+    ],
+    "translation": "Showing the newest {0} of {1} STATE entries."
   },
   "5lWFkC": {
     "message": "Sign in",
@@ -9913,7 +9925,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        50
+        65
       ]
     ],
     "translation": "Social Media"
@@ -9925,7 +9937,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        22
+        30
       ]
     ],
     "translation": "Software Development"
@@ -10584,7 +10596,6 @@
     "translation": "The page you're looking for doesn't exist or has been moved."
   },
   "fI89nT": {
-    "translation": "The plan doc could not be loaded. Try again shortly.",
     "message": "The plan doc could not be loaded. Try again shortly.",
     "placeholders": {},
     "comments": [],
@@ -10593,10 +10604,10 @@
         "src/views/card/components/PlanDocPanel.tsx",
         26
       ]
-    ]
+    ],
+    "translation": "The plan doc could not be loaded. Try again shortly."
   },
   "goPgue": {
-    "translation": "The plan doc is too large to display.",
     "message": "The plan doc is too large to display.",
     "placeholders": {},
     "comments": [],
@@ -10605,10 +10616,10 @@
         "src/views/card/components/PlanDocPanel.tsx",
         21
       ]
-    ]
+    ],
+    "translation": "The plan doc is too large to display."
   },
   "rhpzJK": {
-    "translation": "The plan doc link is not valid.",
     "message": "The plan doc link is not valid.",
     "placeholders": {},
     "comments": [],
@@ -10617,10 +10628,10 @@
         "src/views/card/components/PlanDocPanel.tsx",
         24
       ]
-    ]
+    ],
+    "translation": "The plan doc link is not valid."
   },
   "M1Q8Pv": {
-    "translation": "The plan doc was not found. It may have been moved or not pushed yet.",
     "message": "The plan doc was not found. It may have been moved or not pushed yet.",
     "placeholders": {},
     "comments": [],
@@ -10629,7 +10640,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         19
       ]
-    ]
+    ],
+    "translation": "The plan doc was not found. It may have been moved or not pushed yet."
   },
   "fQCrjt": {
     "message": "The visibility of your board has been set to {0}.",
@@ -10736,7 +10748,6 @@
     "translation": "This board URL has already been taken"
   },
   "gKJ9z4": {
-    "translation": "This doc has no STATE section yet.",
     "message": "This doc has no STATE section yet.",
     "placeholders": {},
     "comments": [],
@@ -10745,7 +10756,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         102
       ]
-    ]
+    ],
+    "translation": "This doc has no STATE section yet."
   },
   "mTwGOf": {
     "message": "This invitation link is invalid or has expired.",
@@ -10772,7 +10784,6 @@
     "translation": "This member's permissions have been reset to their role defaults."
   },
   "iFSqoQ": {
-    "translation": "This repository is not allowed for plan docs.",
     "message": "This repository is not allowed for plan docs.",
     "placeholders": {},
     "comments": [],
@@ -10781,7 +10792,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         17
       ]
-    ]
+    ],
+    "translation": "This repository is not allowed for plan docs."
   },
   "HQVm6e": {
     "message": "This URL has already been taken",
@@ -10934,11 +10946,11 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        17
+        25
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        23
+        31
       ]
     ],
     "translation": "To Do"
@@ -11038,7 +11050,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        57
+        72
       ]
     ],
     "translation": "Triaging"
@@ -11308,7 +11320,6 @@
     "translation": "Unable to duplicate card"
   },
   "CzEx2k": {
-    "translation": "Unable to link the plan doc",
     "message": "Unable to link the plan doc",
     "placeholders": {},
     "comments": [],
@@ -11317,7 +11328,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         137
       ]
-    ]
+    ],
+    "translation": "Unable to link the plan doc"
   },
   "d196/6": {
     "message": "Unable to move board",
@@ -11420,7 +11432,6 @@
     "translation": "Unable to test webhook"
   },
   "G9NvBP": {
-    "translation": "Unable to unlink the plan doc",
     "message": "Unable to unlink the plan doc",
     "placeholders": {},
     "comments": [],
@@ -11429,7 +11440,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         187
       ]
-    ]
+    ],
+    "translation": "Unable to unlink the plan doc"
   },
   "T7Mywq": {
     "message": "Unable to update board",
@@ -11662,7 +11674,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        35
+        45
       ]
     ],
     "translation": "Under Review"
@@ -11842,7 +11854,6 @@
     "obsolete": true
   },
   "egi434": {
-    "translation": "Unlink plan doc",
     "message": "Unlink plan doc",
     "placeholders": {},
     "comments": [],
@@ -11851,7 +11862,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         200
       ]
-    ]
+    ],
+    "translation": "Unlink plan doc"
   },
   "SMaFdc": {
     "message": "Unsubscribe",
@@ -12051,11 +12063,11 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        50
+        65
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        67
+        82
       ]
     ],
     "translation": "Urgent"
@@ -12191,7 +12203,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        50
+        65
       ]
     ],
     "translation": "Video"
@@ -12833,7 +12845,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        43
+        58
       ]
     ],
     "translation": "Writing"
@@ -12940,7 +12952,6 @@
     "translation": "You can self-host by following the instructions in our <0>repo</0>."
   },
   "nfQzUA": {
-    "translation": "You do not have access to plan docs.",
     "message": "You do not have access to plan docs.",
     "placeholders": {},
     "comments": [],
@@ -12949,7 +12960,8 @@
         "src/views/planDoc/index.tsx",
         33
       ]
-    ]
+    ],
+    "translation": "You do not have access to plan docs."
   },
   "tUL16u": {
     "message": "You don't have any other workspaces to move this board to.",
@@ -12990,11 +13002,11 @@
       ],
       [
         "src/views/boards/index.tsx",
-        69
+        70
       ],
       [
         "src/views/boards/index.tsx",
-        90
+        91
       ]
     ],
     "translation": "You don't have permission"

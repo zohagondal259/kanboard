@@ -1156,7 +1156,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        75
+        90
       ]
     ],
     "translation": "Ansøgere"
@@ -1168,7 +1168,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        46
+        61
       ]
     ],
     "translation": "Godkendelse"
@@ -1384,7 +1384,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        59
+        74
       ]
     ],
     "translation": "Afventer kunde"
@@ -1406,7 +1406,6 @@
     "translation": "Tilbage"
   },
   "9krCfL": {
-    "translation": "",
     "message": "Back to card",
     "placeholders": {},
     "comments": [],
@@ -1415,7 +1414,8 @@
         "src/views/planDoc/index.tsx",
         50
       ]
-    ]
+    ],
+    "translation": ""
   },
   "KNKCTb": {
     "message": "Backlog",
@@ -1424,7 +1424,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        23
+        31
       ]
     ],
     "translation": "Backlog"
@@ -1436,7 +1436,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        16
+        24
       ]
     ],
     "translation": "Grundlæggende Kanban"
@@ -1448,7 +1448,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        28
+        36
       ]
     ],
     "translation": "Grundlæggende roadmap"
@@ -1575,7 +1575,7 @@
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        68
+        83
       ],
       [
         "src/views/settings/BillingSettings.tsx",
@@ -1603,7 +1603,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        50
+        65
       ]
     ],
     "translation": "Blogindlæg"
@@ -1868,7 +1868,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        42
+        57
       ]
     ],
     "translation": "Brainstorming"
@@ -1880,7 +1880,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        24
+        32
       ]
     ],
     "translation": "Fejl"
@@ -1892,7 +1892,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        64
+        79
       ]
     ],
     "translation": "Fejlrapport"
@@ -2278,7 +2278,6 @@
     "translation": "Kan se medlemmer"
   },
   "/NErqp": {
-    "translation": "",
     "message": "Can view plan docs",
     "placeholders": {},
     "comments": [],
@@ -2291,7 +2290,8 @@
         "src/views/settings/components/RolePermissions.tsx",
         44
       ]
-    ]
+    ],
+    "translation": ""
   },
   "SNfg0e": {
     "message": "Can view workspace",
@@ -2725,6 +2725,18 @@
     ],
     "translation": "Klik på linket, vi har sendt til {magicLinkRecipient}, for at logge ind."
   },
+  "qUShdP": {
+    "translation": "",
+    "message": "Client Project",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/boards/components/TemplateBoards.tsx",
+        18
+      ]
+    ]
+  },
   "yz7wBu": {
     "message": "Close",
     "placeholders": {},
@@ -2756,7 +2768,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        23
+        31
       ]
     ],
     "translation": "Kodegennemgang"
@@ -2844,7 +2856,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        94
+        109
       ]
     ],
     "translation": "Fuldført"
@@ -3065,7 +3077,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        40
+        55
       ]
     ],
     "translation": "Indholdsproduktion"
@@ -3478,15 +3490,15 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        24
+        32
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        30
+        38
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        36
+        51
       ]
     ],
     "translation": "Kritisk"
@@ -3665,7 +3677,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        54
+        69
       ]
     ],
     "translation": "Kundesupport"
@@ -3953,7 +3965,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        45
+        60
       ]
     ],
     "translation": "Design"
@@ -4105,15 +4117,15 @@
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        24
+        32
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        30
+        38
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        36
+        51
       ],
       [
         "src/views/home/components/Footer.tsx",
@@ -4157,19 +4169,15 @@
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        17
+        25
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        23
+        31
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        29
-      ],
-      [
-        "src/views/boards/components/TemplateBoards.tsx",
-        35
+        37
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
@@ -4177,7 +4185,11 @@
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        61
+        63
+      ],
+      [
+        "src/views/boards/components/TemplateBoards.tsx",
+        76
       ]
     ],
     "translation": "Færdig"
@@ -4421,7 +4433,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        44
+        59
       ]
     ],
     "translation": "Redigerer"
@@ -4521,15 +4533,15 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        24
+        32
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        30
+        38
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        36
+        51
       ]
     ],
     "translation": "Forbedring"
@@ -4926,7 +4938,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        91
+        106
       ]
     ],
     "translation": "Udførelse"
@@ -4938,7 +4950,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        34
+        42
       ]
     ],
     "translation": "Udvidet roadmap"
@@ -5110,15 +5122,15 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        24
+        32
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        30
+        38
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        36
+        51
       ]
     ],
     "translation": "Funktion"
@@ -5130,7 +5142,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        65
+        80
       ]
     ],
     "translation": "Funktionsønske"
@@ -5354,7 +5366,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        82
+        97
       ]
     ],
     "translation": "Fuldtid"
@@ -5366,7 +5378,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        96
+        111
       ]
     ],
     "translation": "Sjov"
@@ -5694,7 +5706,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        18
+        26
       ]
     ],
     "translation": "Høj prioritet"
@@ -5706,7 +5718,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        80
+        95
       ]
     ],
     "translation": "Ansat"
@@ -5850,7 +5862,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        88
+        103
       ]
     ],
     "translation": "Idéer"
@@ -5874,7 +5886,7 @@
     "origin": [
       [
         "src/views/boards/index.tsx",
-        83
+        84
       ]
     ],
     "translation": "Importér"
@@ -5930,7 +5942,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        96
+        111
       ]
     ],
     "translation": "Vigtigt"
@@ -5990,23 +6002,23 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        17
+        25
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        23
+        31
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        29
+        37
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        35
+        47
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        58
+        73
       ]
     ],
     "translation": "I gang"
@@ -6070,7 +6082,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        77
+        92
       ]
     ],
     "translation": "Til samtale"
@@ -6239,7 +6251,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        82
+        97
       ]
     ],
     "translation": "Junior"
@@ -6416,7 +6428,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        96
+        111
       ]
     ],
     "translation": "Læring"
@@ -6518,7 +6530,6 @@
     "translation": "Link kopieret"
   },
   "uRlDON": {
-    "translation": "",
     "message": "Link plan doc",
     "placeholders": {},
     "comments": [],
@@ -6527,7 +6538,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         172
       ]
-    ]
+    ],
+    "translation": ""
   },
   "2BBAbc": {
     "message": "List",
@@ -6614,7 +6626,6 @@
     "translation": "Indlæser rettigheder..."
   },
   "AK9kCO": {
-    "translation": "",
     "message": "Loading plan doc...",
     "placeholders": {},
     "comments": [],
@@ -6623,7 +6634,8 @@
         "src/views/planDoc/index.tsx",
         66
       ]
-    ]
+    ],
+    "translation": ""
   },
   "Z3FXyt": {
     "message": "Loading...",
@@ -6668,7 +6680,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        96
+        111
       ]
     ],
     "translation": "Langsigtet"
@@ -6692,7 +6704,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        18
+        26
       ]
     ],
     "translation": "Lav prioritet"
@@ -6796,7 +6808,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        18
+        26
       ]
     ],
     "translation": "Mellem prioritet"
@@ -7139,7 +7151,7 @@
     "origin": [
       [
         "src/views/boards/index.tsx",
-        105
+        106
       ],
       [
         "src/views/home/components/Features.tsx",
@@ -7283,7 +7295,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        56
+        71
       ]
     ],
     "translation": "Ny sag"
@@ -7319,7 +7331,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        50
+        65
       ]
     ],
     "translation": "Nyhedsbrev"
@@ -7343,7 +7355,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        93
+        108
       ]
     ],
     "translation": "Næste trin"
@@ -7555,7 +7567,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        78
+        93
       ]
     ],
     "translation": "Tilbud"
@@ -7591,7 +7603,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        79
+        94
       ]
     ],
     "translation": "Introduktion"
@@ -7633,7 +7645,6 @@
     "translation": "Åbn kommandomenu"
   },
   "i5m06o": {
-    "translation": "",
     "message": "Open full plan doc",
     "placeholders": {},
     "comments": [],
@@ -7642,7 +7653,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         68
       ]
-    ]
+    ],
+    "translation": ""
   },
   "cFQEU/": {
     "message": "Open keyboard shortcuts",
@@ -7775,7 +7787,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        82
+        97
       ]
     ],
     "translation": "Deltid"
@@ -7865,7 +7877,6 @@
     "translation": "Adgangskoderne matcher ikke"
   },
   "YLiyuz": {
-    "translation": "",
     "message": "Path, for example INPROGRESS_PLAN.md",
     "placeholders": {},
     "comments": [],
@@ -7874,7 +7885,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         163
       ]
-    ]
+    ],
+    "translation": ""
   },
   "URAE3q": {
     "message": "Paused",
@@ -8023,7 +8035,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        86
+        101
       ]
     ],
     "translation": "Personligt projekt"
@@ -8053,7 +8065,6 @@
     "translation": "Abonnement"
   },
   "gSdZqj": {
-    "translation": "",
     "message": "Plan doc",
     "placeholders": {},
     "comments": [],
@@ -8066,10 +8077,10 @@
         "src/views/planDoc/index.tsx",
         42
       ]
-    ]
+    ],
+    "translation": ""
   },
   "9bQGzZ": {
-    "translation": "",
     "message": "Plan docs are not set up on this server.",
     "placeholders": {},
     "comments": [],
@@ -8078,7 +8089,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         15
       ]
-    ]
+    ],
+    "translation": ""
   },
   "Iqh0Uv": {
     "message": "Planned",
@@ -8087,11 +8099,11 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        29
+        37
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        35
+        46
       ]
     ],
     "translation": "Planlagt"
@@ -8103,7 +8115,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        90
+        105
       ]
     ],
     "translation": "Planlægning"
@@ -8660,7 +8672,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        47
+        62
       ]
     ],
     "translation": "Publicering"
@@ -8672,7 +8684,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        66
+        81
       ]
     ],
     "translation": "Spørgsmål"
@@ -8696,7 +8708,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        96
+        111
       ]
     ],
     "translation": "Hurtig gevinst"
@@ -8708,7 +8720,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        73
+        88
       ]
     ],
     "translation": "Rekruttering"
@@ -8720,7 +8732,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        35
+        49
       ]
     ],
     "translation": "Afvist"
@@ -8732,7 +8744,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        82
+        97
       ]
     ],
     "translation": "Fjernarbejde"
@@ -8945,7 +8957,6 @@
     "translation": "omdøbte tjeklistepunktet til <0>{0}</0>"
   },
   "3MRBZZ": {
-    "translation": "",
     "message": "Repository, for example owner/docs",
     "placeholders": {},
     "comments": [],
@@ -8954,7 +8965,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         158
       ]
-    ]
+    ],
+    "translation": ""
   },
   "Yx0Ud8": {
     "message": "Requested",
@@ -8963,11 +8975,11 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        29
+        37
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        35
+        44
       ]
     ],
     "translation": "Anmodet"
@@ -8979,7 +8991,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        89
+        104
       ]
     ],
     "translation": "Research"
@@ -9003,7 +9015,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        60
+        75
       ]
     ],
     "translation": "Løsning"
@@ -9027,7 +9039,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        92
+        107
       ]
     ],
     "translation": "Gennemgang"
@@ -9180,7 +9192,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        76
+        91
       ]
     ],
     "translation": "Screening"
@@ -9428,7 +9440,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        82
+        97
       ]
     ],
     "translation": "Senior"
@@ -9626,7 +9638,6 @@
     "translation": "Genveje"
   },
   "jVwuHT": {
-    "translation": "",
     "message": "Showing the newest {0} of {1} STATE entries.",
     "placeholders": {
       "0": [
@@ -9642,7 +9653,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         108
       ]
-    ]
+    ],
+    "translation": ""
   },
   "5lWFkC": {
     "message": "Sign in",
@@ -9835,7 +9847,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        50
+        65
       ]
     ],
     "translation": "Sociale medier"
@@ -9847,7 +9859,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        22
+        30
       ]
     ],
     "translation": "Softwareudvikling"
@@ -10506,7 +10518,6 @@
     "translation": "Siden, du leder efter, findes ikke eller er blevet flyttet."
   },
   "fI89nT": {
-    "translation": "",
     "message": "The plan doc could not be loaded. Try again shortly.",
     "placeholders": {},
     "comments": [],
@@ -10515,10 +10526,10 @@
         "src/views/card/components/PlanDocPanel.tsx",
         26
       ]
-    ]
+    ],
+    "translation": ""
   },
   "goPgue": {
-    "translation": "",
     "message": "The plan doc is too large to display.",
     "placeholders": {},
     "comments": [],
@@ -10527,10 +10538,10 @@
         "src/views/card/components/PlanDocPanel.tsx",
         21
       ]
-    ]
+    ],
+    "translation": ""
   },
   "rhpzJK": {
-    "translation": "",
     "message": "The plan doc link is not valid.",
     "placeholders": {},
     "comments": [],
@@ -10539,10 +10550,10 @@
         "src/views/card/components/PlanDocPanel.tsx",
         24
       ]
-    ]
+    ],
+    "translation": ""
   },
   "M1Q8Pv": {
-    "translation": "",
     "message": "The plan doc was not found. It may have been moved or not pushed yet.",
     "placeholders": {},
     "comments": [],
@@ -10551,7 +10562,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         19
       ]
-    ]
+    ],
+    "translation": ""
   },
   "fQCrjt": {
     "message": "The visibility of your board has been set to {0}.",
@@ -10658,7 +10670,6 @@
     "translation": "Denne tavle-URL er allerede taget"
   },
   "gKJ9z4": {
-    "translation": "",
     "message": "This doc has no STATE section yet.",
     "placeholders": {},
     "comments": [],
@@ -10667,7 +10678,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         102
       ]
-    ]
+    ],
+    "translation": ""
   },
   "mTwGOf": {
     "message": "This invitation link is invalid or has expired.",
@@ -10694,7 +10706,6 @@
     "translation": "Dette medlems rettigheder er nulstillet til standardindstillingerne for rollen."
   },
   "iFSqoQ": {
-    "translation": "",
     "message": "This repository is not allowed for plan docs.",
     "placeholders": {},
     "comments": [],
@@ -10703,7 +10714,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         17
       ]
-    ]
+    ],
+    "translation": ""
   },
   "HQVm6e": {
     "message": "This URL has already been taken",
@@ -10856,11 +10868,11 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        17
+        25
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        23
+        31
       ]
     ],
     "translation": "Opgaver"
@@ -10960,7 +10972,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        57
+        72
       ]
     ],
     "translation": "Triagering"
@@ -11230,7 +11242,6 @@
     "translation": "Kunne ikke duplikere kort"
   },
   "CzEx2k": {
-    "translation": "",
     "message": "Unable to link the plan doc",
     "placeholders": {},
     "comments": [],
@@ -11239,7 +11250,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         137
       ]
-    ]
+    ],
+    "translation": ""
   },
   "d196/6": {
     "message": "Unable to move board",
@@ -11342,7 +11354,6 @@
     "translation": "Kunne ikke teste webhook"
   },
   "G9NvBP": {
-    "translation": "",
     "message": "Unable to unlink the plan doc",
     "placeholders": {},
     "comments": [],
@@ -11351,7 +11362,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         187
       ]
-    ]
+    ],
+    "translation": ""
   },
   "T7Mywq": {
     "message": "Unable to update board",
@@ -11584,7 +11596,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        35
+        45
       ]
     ],
     "translation": "Til gennemgang"
@@ -11764,7 +11776,6 @@
     "obsolete": true
   },
   "egi434": {
-    "translation": "",
     "message": "Unlink plan doc",
     "placeholders": {},
     "comments": [],
@@ -11773,7 +11784,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         200
       ]
-    ]
+    ],
+    "translation": ""
   },
   "EkH9pt": {
     "message": "Update",
@@ -11956,11 +11968,11 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        50
+        65
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        67
+        82
       ]
     ],
     "translation": "Haster"
@@ -12096,7 +12108,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        50
+        65
       ]
     ],
     "translation": "Video"
@@ -12712,7 +12724,7 @@
     "origin": [
       [
         "src/views/boards/components/TemplateBoards.tsx",
-        43
+        58
       ]
     ],
     "translation": "Skrivning"
@@ -12819,7 +12831,6 @@
     "translation": "Du kan selvhoste ved at følge vejledningen i vores <0>repo</0>."
   },
   "nfQzUA": {
-    "translation": "",
     "message": "You do not have access to plan docs.",
     "placeholders": {},
     "comments": [],
@@ -12828,7 +12839,8 @@
         "src/views/planDoc/index.tsx",
         33
       ]
-    ]
+    ],
+    "translation": ""
   },
   "tUL16u": {
     "message": "You don't have any other workspaces to move this board to.",
@@ -12869,11 +12881,11 @@
       ],
       [
         "src/views/boards/index.tsx",
-        69
+        70
       ],
       [
         "src/views/boards/index.tsx",
-        90
+        91
       ]
     ],
     "translation": "Du har ikke tilladelse"
