@@ -1,0 +1,102 @@
+name: Deploy to Heroku
+
+# Builds the web and migrate images for linux/amd64, pushes them to Heroku's
+# container registry as the `web` and `release` process types, then releases
+# both. Heroku runs the `release` image (migrations) before the new web dyno
+# starts, and keeps the old release if the migrations fail.
+#
+# Requires, in the repository settings:
+#   secret   HEROKU_API_KEY  - a Heroku API key
+#   variable HEROKU_APP      - the Heroku app name
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: heroku-deploy
+  cancel-in-progress: false
+
+env:
+  REGISTRY: registry.heroku.com
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Both are required for `git describe` in the version step.
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Check configuration
+        env:
+          HEROKU_APP: ${{ vars.HEROKU_APP }}
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: |
+          if [[ -z "$HEROKU_APP" ]]; then echo "::error::Repository variable HEROKU_APP is not set"; exit 1; fi
+          if [[ -z "$HEROKU_API_KEY" ]]; then echo "::error::Repository secret HEROKU_API_KEY is not set"; exit 1; fi
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@37fe631027851001ddb9b187196cc803df7f5f0e # v4.3.0
+
+      - name: Log into ${{ env.REGISTRY }}
+        uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v4.6.0
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: _
+          password: ${{ secrets.HEROKU_API_KEY }}
+
+      - name: Extract version
+        id: version
+        run: |
+          VERSION="$(git describe --tags --always --long 2>/dev/null || true)"
+          if [[ -z "$VERSION" ]]; then VERSION="${GITHUB_SHA:0:7}"; fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Version: $VERSION"
+
+      # Heroku's registry accepts only a plain single-platform image manifest,
+      # so provenance and SBOM attestations (which wrap it in an index) are off.
+      - name: Build and push web image
+        uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a # v7.3.0
+        with:
+          context: .
+          file: apps/web/Dockerfile
+          target: web
+          push: true
+          platforms: linux/amd64
+          provenance: false
+          sbom: false
+          tags: ${{ env.REGISTRY }}/${{ vars.HEROKU_APP }}/web
+          build-args: |
+            APP_VERSION=${{ steps.version.outputs.version }}
+          cache-from: type=gha,scope=heroku-web
+          cache-to: type=gha,mode=max,scope=heroku-web
+
+      - name: Build and push migrate image
+        uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a # v7.3.0
+        with:
+          context: .
+          file: apps/web/Dockerfile
+          target: migrate
+          push: true
+          platforms: linux/amd64
+          provenance: false
+          sbom: false
+          tags: ${{ env.REGISTRY }}/${{ vars.HEROKU_APP }}/release
+          build-args: |
+            APP_VERSION=${{ steps.version.outputs.version }}
+          cache-from: type=gha,scope=heroku-migrate
+          cache-to: type=gha,mode=max,scope=heroku-migrate
+
+      - name: Release on Heroku
+        env:
+          HEROKU_APP: ${{ vars.HEROKU_APP }}
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: |
+          npm install --global heroku >/dev/null
+          heroku container:release web release --app "$HEROKU_APP"
