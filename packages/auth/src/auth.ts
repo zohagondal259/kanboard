@@ -27,7 +27,9 @@ export const initAuth = (db: dbClient) => {
       },
     }),
     session: {
-      expiresIn: 60 * 60 * 24 * 30, // 30 days
+      // 90 days: clients invited as guests may only check in every few weeks,
+      // and logging in again means waiting for an email link.
+      expiresIn: 60 * 60 * 24 * 90,
       updateAge: 60 * 60 * 24 * 2, // Update session expiry every 48 hours if user is active
       freshAge: 0,
     },
