@@ -59,19 +59,20 @@ jobs:
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
           echo "Version: $VERSION"
 
-      # Heroku's registry accepts only a plain single-platform image manifest,
-      # so provenance and SBOM attestations (which wrap it in an index) are off.
+      # Heroku's registry accepts only a plain single-platform Docker v2 manifest.
+      # So provenance and SBOM attestations (which wrap it in an index) are off,
+      # and `oci-mediatypes=false` stops Buildx emitting OCI media types, which
+      # the registry rejects with "unsupported".
       - name: Build and push web image
         uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a # v7.3.0
         with:
           context: .
           file: apps/web/Dockerfile
           target: web
-          push: true
           platforms: linux/amd64
           provenance: false
           sbom: false
-          tags: ${{ env.REGISTRY }}/${{ vars.HEROKU_APP }}/web
+          outputs: type=image,name=${{ env.REGISTRY }}/${{ vars.HEROKU_APP }}/web,push=true,oci-mediatypes=false
           build-args: |
             APP_VERSION=${{ steps.version.outputs.version }}
           cache-from: type=gha,scope=heroku-web
@@ -83,11 +84,10 @@ jobs:
           context: .
           file: apps/web/Dockerfile
           target: migrate
-          push: true
           platforms: linux/amd64
           provenance: false
           sbom: false
-          tags: ${{ env.REGISTRY }}/${{ vars.HEROKU_APP }}/release
+          outputs: type=image,name=${{ env.REGISTRY }}/${{ vars.HEROKU_APP }}/release,push=true,oci-mediatypes=false
           build-args: |
             APP_VERSION=${{ steps.version.outputs.version }}
           cache-from: type=gha,scope=heroku-migrate
