@@ -146,6 +146,13 @@ export default function SideNavigation({
     [isDarkMode],
   );
 
+  // Guests only view boards, so templates are of no use to them.
+  const isGuest = workspace.role === "guest";
+  const visibleNavigation = useMemo(
+    () => navigation.filter((item) => !(isGuest && item.href === "/templates")),
+    [navigation, isGuest],
+  );
+
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
@@ -163,7 +170,7 @@ export default function SideNavigation({
             {!isCollapsed && (
               <Link href="/" className="block">
                 <h1 className="pl-2 text-[16px] font-bold tracking-tight text-neutral-900 dark:text-dark-1000">
-                  kan.bn
+                  {env("NEXT_PUBLIC_APP_NAME")?.trim() || "kan.bn"}
                 </h1>
               </Link>
             )}
@@ -191,7 +198,7 @@ export default function SideNavigation({
 
           <WorkspaceMenu isCollapsed={isCollapsed} />
           <ul role="list" className="space-y-1">
-            {navigation.map((item) => (
+            {visibleNavigation.map((item) => (
               <li key={item.name}>
                 <ReactiveButton
                   href={item.href}

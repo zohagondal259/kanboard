@@ -80,23 +80,24 @@ export default function WorkspaceSettings() {
           disabled={!canEditWorkspace}
         />
 
-        <div className="border-t border-light-300 dark:border-dark-300">
-          <h2 className="mb-4 mt-8 text-[14px] font-bold text-neutral-900 dark:text-dark-1000">
-            {t`Delete workspace`}
-          </h2>
-          <p className="mb-8 text-sm text-neutral-500 dark:text-dark-900">
-            {t`Once you delete your workspace, there is no going back. This action cannot be undone.`}
-          </p>
-          <div className="mt-4">
-            <Button
-              variant="secondary"
-              onClick={() => openModal("DELETE_WORKSPACE")}
-              disabled={workspace.role !== "admin"}
-            >
+        {workspace.role === "admin" && (
+          <div className="border-t border-light-300 dark:border-dark-300">
+            <h2 className="mb-4 mt-8 text-[14px] font-bold text-neutral-900 dark:text-dark-1000">
               {t`Delete workspace`}
-            </Button>
+            </h2>
+            <p className="mb-8 text-sm text-neutral-500 dark:text-dark-900">
+              {t`Once you delete your workspace, there is no going back. This action cannot be undone.`}
+            </p>
+            <div className="mt-4">
+              <Button
+                variant="secondary"
+                onClick={() => openModal("DELETE_WORKSPACE")}
+              >
+                {t`Delete workspace`}
+              </Button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       {/* Workspace-specific modals */}

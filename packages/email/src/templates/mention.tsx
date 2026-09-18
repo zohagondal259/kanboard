@@ -3,13 +3,12 @@ import { Button } from "@react-email/button";
 import { Container } from "@react-email/container";
 import { Head } from "@react-email/head";
 import { Heading } from "@react-email/heading";
-import { Hr } from "@react-email/hr";
 import { Html } from "@react-email/html";
-import { Link } from "@react-email/link";
 import { Preview } from "@react-email/preview";
 import { Text } from "@react-email/text";
-import { env } from "next-runtime-env";
 import * as React from "react";
+
+import { BrandFooter, BrandHeading } from "../components/Branding";
 
 export const MentionTemplate = ({
   commenterName,
@@ -37,17 +36,7 @@ export const MentionTemplate = ({
           paddingRight: "0.75rem",
         }}
       >
-        <Heading
-          style={{
-            marginTop: "2.5rem",
-            marginBottom: "2.5rem",
-            fontSize: "24px",
-            fontWeight: "bold",
-            color: "#232323",
-          }}
-        >
-          kan.bn
-        </Heading>
+        <BrandHeading fallback="kan.bn" />
         <Heading
           style={{ fontSize: "24px", fontWeight: "bold", color: "#232323" }}
         >
@@ -61,7 +50,8 @@ export const MentionTemplate = ({
           }}
         >
           <strong>{commenterName}</strong> mentioned you in a comment on the
-          card <strong>{cardTitle}</strong> in the board <strong>{boardName}</strong>.
+          card <strong>{cardTitle}</strong> in the board{" "}
+          <strong>{boardName}</strong>.
         </Text>
         <Button
           target="_blank"
@@ -82,27 +72,10 @@ export const MentionTemplate = ({
         >
           View Card
         </Button>
-        <Hr
-          style={{
-            marginTop: "2.5rem",
-            marginBottom: "2rem",
-            borderWidth: "1px",
-          }}
-        />
-        <Text style={{ color: "#7e7e7e" }}>
-          <Link
-            href={env("NEXT_PUBLIC_BASE_URL")}
-            target="_blank"
-            style={{ color: "#7e7e7e", textDecoration: "underline" }}
-          >
-            Kan
-          </Link>
-          , the open source Trello alternative.
-        </Text>
+        <BrandFooter />
       </Container>
     </Body>
   </Html>
 );
 
 export default MentionTemplate;
-

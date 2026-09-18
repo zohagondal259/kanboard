@@ -138,8 +138,13 @@ export default function Dashboard({
     }
   }, [searchParams, showPopup, router]);
 
+  const { data: canCreateWorkspace } = api.workspace.canCreate.useQuery(
+    undefined,
+    { enabled: !!session?.user },
+  );
+
   useEffect(() => {
-    if (hasLoaded && availableWorkspaces.length === 0) {
+    if (hasLoaded && availableWorkspaces.length === 0 && canCreateWorkspace) {
       if (env("NEXT_PUBLIC_KAN_ENV") === "cloud") {
         router.push(
           `/onboarding/select-plan?returnUrl=${encodeURIComponent(window.location.pathname)}`,
@@ -148,7 +153,13 @@ export default function Dashboard({
         openModal("NEW_WORKSPACE", undefined, undefined, false);
       }
     }
-  }, [hasLoaded, availableWorkspaces.length, openModal, router]);
+  }, [
+    hasLoaded,
+    availableWorkspaces.length,
+    canCreateWorkspace,
+    openModal,
+    router,
+  ]);
 
   useEffect(() => {
     const isCredentialsEnabled =

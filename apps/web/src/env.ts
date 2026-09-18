@@ -15,6 +15,7 @@ export const env = createEnv({
    */
   server: {
     KAN_ADMIN_API_KEY: z.string().optional(),
+    WORKSPACE_CREATOR_EMAILS: z.string().optional(),
     BETTER_AUTH_SECRET: z.string(),
     BETTER_AUTH_TRUSTED_ORIGINS: z
       .string()
@@ -119,6 +120,7 @@ export const env = createEnv({
         (s) => !s || s.toLowerCase() === "true" || s.toLowerCase() === "false",
       )
       .optional(),
+    NEXT_PUBLIC_APP_NAME: z.string().optional(),
     NEXT_PUBLIC_WHITE_LABEL_HIDE_POWERED_BY: z
       .string()
       .transform((s) => (s === "" ? undefined : s))
@@ -149,6 +151,7 @@ export const env = createEnv({
     NEXT_PUBLIC_DISABLE_SIGN_UP: process.env.NEXT_PUBLIC_DISABLE_SIGN_UP,
     NEXT_PUBLIC_USE_STANDALONE_OUTPUT:
       process.env.NEXT_PUBLIC_USE_STANDALONE_OUTPUT,
+    NEXT_PUBLIC_APP_NAME: process.env.NEXT_PUBLIC_APP_NAME,
     NEXT_PUBLIC_WHITE_LABEL_HIDE_POWERED_BY:
       process.env.NEXT_PUBLIC_WHITE_LABEL_HIDE_POWERED_BY,
   },

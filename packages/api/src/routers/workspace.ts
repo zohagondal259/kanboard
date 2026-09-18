@@ -19,6 +19,7 @@ import {
 import { createTRPCRouter, protectedProcedure, publicProcedure } from "../trpc";
 import { createAvatarUrlResolver } from "../utils/avatarUrls";
 import { assertPermission } from "../utils/permissions";
+import { canCreateWorkspace } from "../utils/workspaceCreation";
 
 export const workspaceRouter = createTRPCRouter({
   all: protectedProcedure
@@ -304,6 +305,12 @@ export const workspaceRouter = createTRPCRouter({
         throw new TRPCError({
           message: `User not authenticated`,
           code: "UNAUTHORIZED",
+        });
+
+      if (!canCreateWorkspace(userEmail))
+        throw new TRPCError({
+          message: `You do not have permission to create workspaces`,
+          code: "FORBIDDEN",
         });
 
       // Check if slug is provided in cloud environment
@@ -630,6 +637,18 @@ export const workspaceRouter = createTRPCRouter({
       );
 
       return result;
+    }),
+  canCreate: protectedProcedure
+    .input(z.void())
+    .output(z.boolean())
+    .query(({ ctx }) => {
+      if (!ctx.user?.id)
+        throw new TRPCError({
+          message: `User not authenticated`,
+          code: "UNAUTHORIZED",
+        });
+
+      return canCreateWorkspace(ctx.user.email);
     }),
   hasAvailablePartnerSlot: protectedProcedure
     .input(z.void())
