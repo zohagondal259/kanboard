@@ -2726,7 +2726,6 @@
     "translation": "Click on the link we've sent to {magicLinkRecipient} to sign in."
   },
   "qUShdP": {
-    "translation": "Client Project",
     "message": "Client Project",
     "placeholders": {},
     "comments": [],
@@ -2735,7 +2734,8 @@
         "src/views/boards/components/TemplateBoards.tsx",
         18
       ]
-    ]
+    ],
+    "translation": "Client Project"
   },
   "yz7wBu": {
     "message": "Close",
@@ -3919,11 +3919,11 @@
       ],
       [
         "src/views/settings/WorkspaceSettings.tsx",
-        86
+        91
       ],
       [
         "src/views/settings/WorkspaceSettings.tsx",
-        96
+        101
       ]
     ],
     "translation": "Delete workspace"
@@ -4536,7 +4536,7 @@
     "origin": [
       [
         "src/views/settings/WorkspaceSettings.tsx",
-        73
+        76
       ]
     ],
     "translation": "Email visibility"
@@ -6614,7 +6614,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        172
+        174
       ]
     ],
     "translation": "Link plan doc"
@@ -7705,7 +7705,7 @@
     "origin": [
       [
         "src/views/settings/WorkspaceSettings.tsx",
-        89
+        94
       ]
     ],
     "translation": "Once you delete your workspace, there is no going back. This action cannot be undone."
@@ -7729,7 +7729,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        68
+        70
       ]
     ],
     "translation": "Open full plan doc"
@@ -7961,7 +7961,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        163
+        165
       ]
     ],
     "translation": "Path, for example INPROGRESS_PLAN.md"
@@ -8149,7 +8149,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        61
+        63
       ],
       [
         "src/views/planDoc/index.tsx",
@@ -9041,7 +9041,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        158
+        160
       ]
     ],
     "translation": "Repository, for example owner/docs"
@@ -9729,7 +9729,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        108
+        110
       ]
     ],
     "translation": "Showing the newest {0} of {1} STATE entries."
@@ -10602,7 +10602,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        26
+        28
       ]
     ],
     "translation": "The plan doc could not be loaded. Try again shortly."
@@ -10614,7 +10614,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        21
+        23
       ]
     ],
     "translation": "The plan doc is too large to display."
@@ -10626,7 +10626,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        24
+        26
       ]
     ],
     "translation": "The plan doc link is not valid."
@@ -10638,7 +10638,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        19
+        21
       ]
     ],
     "translation": "The plan doc was not found. It may have been moved or not pushed yet."
@@ -10754,7 +10754,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        102
+        104
       ]
     ],
     "translation": "This doc has no STATE section yet."
@@ -10866,6 +10866,18 @@
       ]
     ],
     "translation": "This workspace has reached its member limit. The workspace owner will need to upgrade their plan."
+  },
+  "9Mk/pA": {
+    "translation": "This workspace may not show plan docs from that folder.",
+    "message": "This workspace may not show plan docs from that folder.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        19
+      ]
+    ]
   },
   "duf3Nr": {
     "message": "This workspace URL has already been taken",
@@ -11326,7 +11338,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        137
+        139
       ]
     ],
     "translation": "Unable to link the plan doc"
@@ -11438,7 +11450,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        187
+        189
       ]
     ],
     "translation": "Unable to unlink the plan doc"
@@ -11860,7 +11872,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        200
+        202
       ]
     ],
     "translation": "Unlink plan doc"

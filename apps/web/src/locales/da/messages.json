@@ -2726,7 +2726,6 @@
     "translation": "Klik på linket, vi har sendt til {magicLinkRecipient}, for at logge ind."
   },
   "qUShdP": {
-    "translation": "",
     "message": "Client Project",
     "placeholders": {},
     "comments": [],
@@ -2735,7 +2734,8 @@
         "src/views/boards/components/TemplateBoards.tsx",
         18
       ]
-    ]
+    ],
+    "translation": ""
   },
   "yz7wBu": {
     "message": "Close",
@@ -3893,11 +3893,11 @@
       ],
       [
         "src/views/settings/WorkspaceSettings.tsx",
-        86
+        91
       ],
       [
         "src/views/settings/WorkspaceSettings.tsx",
-        96
+        101
       ]
     ],
     "translation": "Slet arbejdsområde"
@@ -4497,7 +4497,7 @@
     "origin": [
       [
         "src/views/settings/WorkspaceSettings.tsx",
-        73
+        76
       ]
     ],
     "translation": "E-mailsynlighed"
@@ -6536,7 +6536,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        172
+        174
       ]
     ],
     "translation": ""
@@ -7627,7 +7627,7 @@
     "origin": [
       [
         "src/views/settings/WorkspaceSettings.tsx",
-        89
+        94
       ]
     ],
     "translation": "Når du sletter dit arbejdsområde, kan du ikke gå tilbage. Denne handling kan ikke fortrydes."
@@ -7651,7 +7651,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        68
+        70
       ]
     ],
     "translation": ""
@@ -7883,7 +7883,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        163
+        165
       ]
     ],
     "translation": ""
@@ -8071,7 +8071,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        61
+        63
       ],
       [
         "src/views/planDoc/index.tsx",
@@ -8963,7 +8963,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        158
+        160
       ]
     ],
     "translation": ""
@@ -9651,7 +9651,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        108
+        110
       ]
     ],
     "translation": ""
@@ -10524,7 +10524,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        26
+        28
       ]
     ],
     "translation": ""
@@ -10536,7 +10536,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        21
+        23
       ]
     ],
     "translation": ""
@@ -10548,7 +10548,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        24
+        26
       ]
     ],
     "translation": ""
@@ -10560,7 +10560,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        19
+        21
       ]
     ],
     "translation": ""
@@ -10676,7 +10676,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        102
+        104
       ]
     ],
     "translation": ""
@@ -10788,6 +10788,18 @@
       ]
     ],
     "translation": "Dette arbejdsområde har nået sin medlemsgrænse. Ejeren af arbejdsområdet skal opgradere abonnementet."
+  },
+  "9Mk/pA": {
+    "translation": "",
+    "message": "This workspace may not show plan docs from that folder.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/components/PlanDocPanel.tsx",
+        19
+      ]
+    ]
   },
   "duf3Nr": {
     "message": "This workspace URL has already been taken",
@@ -11248,7 +11260,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        137
+        139
       ]
     ],
     "translation": ""
@@ -11360,7 +11372,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        187
+        189
       ]
     ],
     "translation": ""
@@ -11782,7 +11794,7 @@
     "origin": [
       [
         "src/views/card/components/PlanDocPanel.tsx",
-        200
+        202
       ]
     ],
     "translation": ""
