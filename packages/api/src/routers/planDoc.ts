@@ -9,6 +9,7 @@ import * as workspaceRepo from "@kan/db/repository/workspace.repo";
 import { createTRPCRouter, protectedProcedure } from "../trpc";
 import { assertPermission } from "../utils/permissions";
 import {
+  assertPathAllowedForWorkspace,
   assertValidDocLocation,
   fetchPlanDoc,
   isPlanDocsConfigured,
@@ -21,6 +22,7 @@ const planDocErrorCodeSchema = z.enum([
   "REPO_NOT_ALLOWED",
   "INVALID_PATH",
   "INVALID_REF",
+  "PATH_NOT_ALLOWED",
   "NOT_FOUND",
   "TOO_LARGE",
   "UPSTREAM_ERROR",
@@ -60,7 +62,12 @@ const getAuthorisedCard = async (
 
   await assertPermission(db, userId, card.workspaceId, "plandoc:view");
 
-  return { userId, card };
+  const workspace = await workspaceRepo.getById(db, card.workspaceId);
+
+  if (!workspace)
+    throw new TRPCError({ message: "Workspace not found", code: "NOT_FOUND" });
+
+  return { userId, card, workspacePublicId: workspace.publicId };
 };
 
 export const planDocRouter = createTRPCRouter({
@@ -93,7 +100,7 @@ export const planDocRouter = createTRPCRouter({
       }),
     )
     .query(async ({ ctx, input }) => {
-      const { card } = await getAuthorisedCard(
+      const { card, workspacePublicId } = await getAuthorisedCard(
         ctx.db,
         ctx.user?.id,
         input.cardPublicId,
@@ -106,6 +113,7 @@ export const planDocRouter = createTRPCRouter({
         return { configured, link, summary: null, error: null };
 
       try {
+        assertPathAllowedForWorkspace(workspacePublicId, link.path);
         const markdown = await fetchPlanDoc(link);
         return {
           configured,
@@ -142,7 +150,7 @@ export const planDocRouter = createTRPCRouter({
       }),
     )
     .query(async ({ ctx, input }) => {
-      const { card } = await getAuthorisedCard(
+      const { card, workspacePublicId } = await getAuthorisedCard(
         ctx.db,
         ctx.user?.id,
         input.cardPublicId,
@@ -157,6 +165,7 @@ export const planDocRouter = createTRPCRouter({
         });
 
       try {
+        assertPathAllowedForWorkspace(workspacePublicId, link.path);
         const markdown = await fetchPlanDoc(link);
         return {
           link,
@@ -192,7 +201,7 @@ export const planDocRouter = createTRPCRouter({
     )
     .output(planDocLinkSchema)
     .mutation(async ({ ctx, input }) => {
-      const { userId, card } = await getAuthorisedCard(
+      const { userId, card, workspacePublicId } = await getAuthorisedCard(
         ctx.db,
         ctx.user?.id,
         input.cardPublicId,
@@ -202,6 +211,7 @@ export const planDocRouter = createTRPCRouter({
 
       try {
         assertValidDocLocation(input);
+        assertPathAllowedForWorkspace(workspacePublicId, input.path);
       } catch (error) {
         if (error instanceof PlanDocError)
           throw new TRPCError({ message: error.message, code: "BAD_REQUEST" });

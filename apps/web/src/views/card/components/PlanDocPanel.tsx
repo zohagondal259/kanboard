@@ -15,6 +15,8 @@ export const planDocErrorMessage = (code: string): string => {
       return t`Plan docs are not set up on this server.`;
     case "REPO_NOT_ALLOWED":
       return t`This repository is not allowed for plan docs.`;
+    case "PATH_NOT_ALLOWED":
+      return t`This workspace may not show plan docs from that folder.`;
     case "NOT_FOUND":
       return t`The plan doc was not found. It may have been moved or not pushed yet.`;
     case "TOO_LARGE":

@@ -86,6 +86,9 @@ export default function SideNavigation({
   const isCloudEnv = env("NEXT_PUBLIC_KAN_ENV") === "cloud";
 
   const isDarkMode = resolvedTheme === "dark";
+  // An empty setting must fall back to the default as well.
+  const configuredAppName = env("NEXT_PUBLIC_APP_NAME")?.trim();
+  const appName = configuredAppName === "" ? undefined : configuredAppName;
 
   const navigation: {
     name: string;
@@ -170,7 +173,7 @@ export default function SideNavigation({
             {!isCollapsed && (
               <Link href="/" className="block">
                 <h1 className="pl-2 text-[16px] font-bold tracking-tight text-neutral-900 dark:text-dark-1000">
-                  {env("NEXT_PUBLIC_APP_NAME")?.trim() || "kan.bn"}
+                  {appName ?? "kan.bn"}
                 </h1>
               </Link>
             )}

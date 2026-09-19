@@ -5,6 +5,9 @@
  * - PLAN_DOCS_REPOS: comma-separated `owner/name` repositories that may be
  *   linked. Nothing else can be fetched, whatever a caller sends.
  * - PLAN_DOCS_GITHUB_TOKEN: a token with read access to those repositories.
+ * - PLAN_DOCS_WORKSPACE_PREFIXES (optional): which folders each workspace may link,
+ *   as comma-separated `workspacePublicId=folder/` pairs. One repository can hold
+ *   many clients' docs; this keeps a workspace inside its own folder.
  *
  * Neither value is ever returned to a client.
  */
@@ -24,6 +27,7 @@ export type PlanDocErrorCode =
   | "REPO_NOT_ALLOWED"
   | "INVALID_PATH"
   | "INVALID_REF"
+  | "PATH_NOT_ALLOWED"
   | "NOT_FOUND"
   | "TOO_LARGE"
   | "UPSTREAM_ERROR";
@@ -87,6 +91,54 @@ export const assertValidDocLocation = (location: {
 
   if (location.ref && !isValidRef(location.ref))
     throw new PlanDocError("INVALID_REF", "Invalid plan doc ref");
+};
+
+/**
+ * Unset means no restriction. Once set, it fails closed: a workspace that is not
+ * listed can link nothing. It is a server setting on purpose, so a workspace
+ * admin cannot widen their own access.
+ */
+export const getWorkspacePrefixes = (): Map<string, string[]> | null => {
+  const raw = (process.env.PLAN_DOCS_WORKSPACE_PREFIXES ?? "").trim();
+  if (!raw) return null;
+
+  const prefixes = new Map<string, string[]>();
+  for (const entry of raw.split(",")) {
+    const [workspacePublicId, folder] = entry.split("=").map((s) => s.trim());
+    if (!workspacePublicId || !folder) continue;
+
+    const prefix = folder.endsWith("/") ? folder : `${folder}/`;
+    if (!isValidDocPath(`${prefix}x.md`)) continue;
+
+    prefixes.set(workspacePublicId, [
+      ...(prefixes.get(workspacePublicId) ?? []),
+      prefix,
+    ]);
+  }
+  return prefixes;
+};
+
+export const isPathAllowedForWorkspace = (
+  workspacePublicId: string,
+  path: string,
+): boolean => {
+  const prefixes = getWorkspacePrefixes();
+  if (!prefixes) return true;
+
+  return (prefixes.get(workspacePublicId) ?? []).some((prefix) =>
+    path.startsWith(prefix),
+  );
+};
+
+export const assertPathAllowedForWorkspace = (
+  workspacePublicId: string,
+  path: string,
+): void => {
+  if (!isPathAllowedForWorkspace(workspacePublicId, path))
+    throw new PlanDocError(
+      "PATH_NOT_ALLOWED",
+      "This workspace may not link plan docs from that folder",
+    );
 };
 
 const cache = new Map<string, { expiresAt: number; content: string }>();

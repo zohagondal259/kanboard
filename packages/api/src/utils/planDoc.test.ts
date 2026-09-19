@@ -4,6 +4,8 @@ import {
   assertValidDocLocation,
   clearPlanDocCache,
   fetchPlanDoc,
+  getWorkspacePrefixes,
+  isPathAllowedForWorkspace,
   isValidDocPath,
   isValidRef,
   PlanDocError,
@@ -123,6 +125,47 @@ describe("doc location validation", () => {
     expect(() =>
       assertValidDocLocation({ repo: "other/docs", path: "a.md" }),
     ).toThrowError(PlanDocError);
+  });
+});
+
+describe("workspace folder restriction", () => {
+  afterEach(() => {
+    delete process.env.PLAN_DOCS_WORKSPACE_PREFIXES;
+  });
+
+  it("restricts nothing when the setting is unset or blank", () => {
+    expect(getWorkspacePrefixes()).toBeNull();
+    expect(isPathAllowedForWorkspace("ws-any", "anything/PLAN.md")).toBe(true);
+
+    process.env.PLAN_DOCS_WORKSPACE_PREFIXES = "  ";
+    expect(isPathAllowedForWorkspace("ws-any", "anything/PLAN.md")).toBe(true);
+  });
+
+  it("keeps each workspace inside its own folders", () => {
+    process.env.PLAN_DOCS_WORKSPACE_PREFIXES =
+      "ws-a=clientA, ws-a=shared/ , ws-b=clientB/nested/";
+
+    expect(isPathAllowedForWorkspace("ws-a", "clientA/PLAN.md")).toBe(true);
+    expect(isPathAllowedForWorkspace("ws-a", "shared/x/PLAN.md")).toBe(true);
+    expect(isPathAllowedForWorkspace("ws-a", "clientB/nested/PLAN.md")).toBe(
+      false,
+    );
+    expect(isPathAllowedForWorkspace("ws-a", "clientA-other/PLAN.md")).toBe(
+      false,
+    );
+    expect(isPathAllowedForWorkspace("ws-b", "clientB/PLAN.md")).toBe(false);
+    expect(isPathAllowedForWorkspace("ws-b", "clientB/nested/PLAN.md")).toBe(
+      true,
+    );
+  });
+
+  it("fails closed for an unlisted workspace and ignores broken entries", () => {
+    process.env.PLAN_DOCS_WORKSPACE_PREFIXES =
+      "ws-a=clientA/,=x/,ws-c=,ws-d=../up/";
+
+    expect(isPathAllowedForWorkspace("ws-zzz", "clientA/PLAN.md")).toBe(false);
+    expect(isPathAllowedForWorkspace("ws-c", "PLAN.md")).toBe(false);
+    expect(isPathAllowedForWorkspace("ws-d", "../up/PLAN.md")).toBe(false);
   });
 });
 

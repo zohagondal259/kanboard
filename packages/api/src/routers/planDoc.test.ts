@@ -21,6 +21,7 @@ vi.mock("@kan/db/repository/cardPlanDoc.repo", () => ({
 }));
 
 vi.mock("@kan/db/repository/workspace.repo", () => ({
+  getById: vi.fn(),
   getByPublicId: vi.fn(),
 }));
 
@@ -42,6 +43,7 @@ const mockRemoveStale = cardPlanDocRepo.removeByDocExceptCard as ReturnType<
 const mockWorkspaceGetByPublicId = workspaceRepo.getByPublicId as ReturnType<
   typeof vi.fn
 >;
+const mockWorkspaceGetById = workspaceRepo.getById as ReturnType<typeof vi.fn>;
 const mockAssertPermission = assertPermission as ReturnType<typeof vi.fn>;
 
 const CARD_ID = "card-1234567";
@@ -66,12 +68,14 @@ describe("planDoc router", () => {
     process.env.PLAN_DOCS_GITHUB_TOKEN = "test-token";
     mockAssertPermission.mockResolvedValue(undefined);
     mockGetCard.mockResolvedValue({ id: 7, workspaceId: 1 });
+    mockWorkspaceGetById.mockResolvedValue({ id: 1, publicId: "ws-clientA00" });
   });
 
   afterEach(() => {
     vi.unstubAllGlobals();
     delete process.env.PLAN_DOCS_REPOS;
     delete process.env.PLAN_DOCS_GITHUB_TOKEN;
+    delete process.env.PLAN_DOCS_WORKSPACE_PREFIXES;
   });
 
   it("refuses an unauthenticated caller", async () => {
@@ -238,6 +242,77 @@ describe("planDoc router", () => {
         path: "PLAN.md",
         cardId: 7,
       });
+    });
+  });
+
+  describe("workspace folder restriction", () => {
+    beforeEach(() => {
+      process.env.PLAN_DOCS_WORKSPACE_PREFIXES =
+        "ws-clientA00=clientA/,ws-clientB00=clientB/";
+    });
+
+    it("lets a workspace link a doc inside its own folder", async () => {
+      const { planDocRouter } = await import("./planDoc");
+      mockGetCardByDoc.mockResolvedValue(null);
+      mockUpsert.mockResolvedValue({ ...LINK, path: "clientA/PLAN.md" });
+
+      await expect(
+        planDocRouter.createCaller(ctx).set({
+          cardPublicId: CARD_ID,
+          repo: "acme/docs",
+          path: "clientA/PLAN.md",
+        }),
+      ).resolves.toMatchObject({ path: "clientA/PLAN.md" });
+    });
+
+    it("refuses another client's folder, a look-alike folder and the repo root", async () => {
+      const { planDocRouter } = await import("./planDoc");
+      const caller = planDocRouter.createCaller(ctx);
+
+      for (const path of [
+        "clientB/PLAN.md",
+        "clientA-other/PLAN.md",
+        "PLAN.md",
+        "clientA/../clientB/PLAN.md",
+      ]) {
+        await expect(
+          caller.set({ cardPublicId: CARD_ID, repo: "acme/docs", path }),
+        ).rejects.toMatchObject({ code: "BAD_REQUEST" });
+      }
+      expect(mockUpsert).not.toHaveBeenCalled();
+    });
+
+    it("fails closed for a workspace that is not listed", async () => {
+      const { planDocRouter } = await import("./planDoc");
+      mockWorkspaceGetById.mockResolvedValue({
+        id: 1,
+        publicId: "ws-unlisted0",
+      });
+
+      await expect(
+        planDocRouter.createCaller(ctx).set({
+          cardPublicId: CARD_ID,
+          repo: "acme/docs",
+          path: "clientA/PLAN.md",
+        }),
+      ).rejects.toMatchObject({ code: "BAD_REQUEST" });
+    });
+
+    it("will not fetch an existing link that sits outside the folder", async () => {
+      const { planDocRouter } = await import("./planDoc");
+      const fetchMock = vi.fn();
+      vi.stubGlobal("fetch", fetchMock);
+      mockGetByCardId.mockResolvedValue({ ...LINK, path: "clientB/PLAN.md" });
+
+      const caller = planDocRouter.createCaller(ctx);
+      const summary = await caller.get({ cardPublicId: CARD_ID });
+      const full = await caller.getFull({ cardPublicId: CARD_ID });
+
+      expect(summary.error).toBe("PATH_NOT_ALLOWED");
+      expect(summary.summary).toBeNull();
+      expect(full.error).toBe("PATH_NOT_ALLOWED");
+      expect(full.markdown).toBeNull();
+      expect(fetchMock).not.toHaveBeenCalled();
     });
   });
 
