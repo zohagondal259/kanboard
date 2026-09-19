@@ -69,16 +69,21 @@ export default function WorkspaceSettings() {
           disabled={!canEditWorkspace}
         />
 
-        <h2 className="mb-4 mt-8 text-[14px] font-bold text-neutral-900 dark:text-dark-1000">
-          {t`Email visibility`}
-        </h2>
-        <UpdateWorkspaceEmailVisibilityForm
-          workspacePublicId={workspace.publicId}
-          showEmailsToMembers={Boolean(
-            workspaceData?.showEmailsToMembers ?? false,
-          )}
-          disabled={!canEditWorkspace}
-        />
+        {/* Only people who can change it need to see it; a guest has no use for it. */}
+        {canEditWorkspace && (
+          <>
+            <h2 className="mb-4 mt-8 text-[14px] font-bold text-neutral-900 dark:text-dark-1000">
+              {t`Email visibility`}
+            </h2>
+            <UpdateWorkspaceEmailVisibilityForm
+              workspacePublicId={workspace.publicId}
+              showEmailsToMembers={Boolean(
+                workspaceData?.showEmailsToMembers ?? false,
+              )}
+              disabled={!canEditWorkspace}
+            />
+          </>
+        )}
 
         {workspace.role === "admin" && (
           <div className="border-t border-light-300 dark:border-dark-300">
