@@ -18,6 +18,7 @@ import {
   HiOutlineShieldCheck,
   HiOutlineUser,
 } from "react-icons/hi2";
+
 import { usePermissions } from "~/hooks/usePermissions";
 import { useWorkspace } from "~/providers/workspace";
 
@@ -33,6 +34,9 @@ export function SettingsLayout({ children, currentTab }: SettingsLayoutProps) {
   const [selectedTabIndex, setSelectedTabIndex] = useState(0);
 
   const isAdmin = workspace.role === "admin";
+  // Guests hold `*:view`, so `canViewWorkspace` is true for them. A client has
+  // no business in workspace settings, so the tab is hidden outright.
+  const isGuest = workspace.role === "guest";
 
   const settingsTabs = [
     {
@@ -45,7 +49,7 @@ export function SettingsLayout({ children, currentTab }: SettingsLayoutProps) {
       key: "workspace",
       icon: <HiOutlineRectangleGroup />,
       label: t`Workspace`,
-      condition: canViewWorkspace,
+      condition: canViewWorkspace && !isGuest,
     },
     {
       key: "permissions",

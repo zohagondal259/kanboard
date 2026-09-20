@@ -17,7 +17,18 @@ export default function LoginPage() {
   const [isMagicLinkSent, setIsMagicLinkSent] = useState<boolean>(false);
   const [magicLinkRecipient, setMagicLinkRecipient] = useState<string>("");
 
-  const redirect = useSearchParams().get("next");
+  const searchParams = useSearchParams();
+  const redirect = searchParams.get("next");
+  const signInError = searchParams.get("error");
+
+  // Better Auth reports a blocked sign-up as `failed_to_create_user`: the link
+  // itself was valid, but the address has no account and sign-up is disabled.
+  const signInErrorMessage =
+    signInError === "failed_to_create_user"
+      ? t`There's no account for this email address. Ask for an invite, then sign in with the address it was sent to.`
+      : signInError
+        ? t`That sign-in link didn't work. Request a new one below.`
+        : null;
 
   const handleMagicLinkSent = (value: boolean, recipient: string) => {
     setIsMagicLinkSent(value);
@@ -54,6 +65,11 @@ export default function LoginPage() {
             ) : (
               <div className="w-full rounded-lg border border-light-500 bg-light-300 px-4 py-10 dark:border-dark-400 dark:bg-dark-200 sm:max-w-md lg:px-10">
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+                  {signInErrorMessage && (
+                    <p className="mb-6 rounded-md bg-red-500/10 px-3 py-2 text-sm text-red-400">
+                      {signInErrorMessage}
+                    </p>
+                  )}
                   <Auth setIsMagicLinkSent={handleMagicLinkSent} />
                 </div>
               </div>

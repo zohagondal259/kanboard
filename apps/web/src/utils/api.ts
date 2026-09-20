@@ -24,7 +24,18 @@ const authLink: TRPCLink<AppRouter> = () => {
         },
         error(err) {
           if (typeof window !== "undefined" && err.message === "UNAUTHORIZED") {
-            window.location.href = "/login";
+            // A magic link for an address with no account lands here as
+            // `?error=failed_to_create_user`. Carry that one code to the login
+            // page: without it the bounce looks like being logged straight back
+            // out with no explanation. Other pages' error params are left
+            // alone, so nothing else changes behaviour.
+            const error = new URLSearchParams(window.location.search).get(
+              "error",
+            );
+            window.location.href =
+              error === "failed_to_create_user"
+                ? "/login?error=failed_to_create_user"
+                : "/login";
           }
           observer.error(err);
         },
