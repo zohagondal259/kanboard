@@ -4,6 +4,8 @@
 node_modules
 .pnp
 .pnp.js
+# left behind when pnpm install runs in a container with the repo mounted
+.pnpm-store
 
 # testing
 coverage
