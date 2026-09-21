@@ -18,50 +18,46 @@ board stay with your project team, exactly as they do today.
 
 ---
 
-## Step 1 — create your API key
+## Setup — three steps, two minutes
 
-An API key is how your assistant proves it is you. Think of it as a password that only reads.
+### Step 1 — add the connector
 
-1. Sign in to the board.
-2. Open **Settings → API**.
-3. Create a key and copy it. **You will only see it once.**
+In your AI assistant, add a new MCP connector and point it at:
 
-Keep it somewhere safe, like your password manager. Anyone who has it can read whatever you can
-read, so do not paste it into an email, a chat message or a shared document.
-
-## Step 2 — connect it
-
-If you use Claude Code, run this in a terminal, replacing the two placeholders:
-
-```bash
-claude mcp add -s user --transport http projectboard https://kanboard-dc2835c6a332.herokuapp.com/api/mcp --header "Authorization: Bearer <YOUR-API-KEY>"
+```
+https://kanboard-gateway-cbfc174dc099.herokuapp.com/api/mcp
 ```
 
-Replace `<YOUR-API-KEY>` with the key from Step 1. The address is the same for everyone; only
-the key is yours.
+There is no API key field. Leave any key or token field blank.
 
-`-s user` stores the setting in your own home folder rather than inside a project, so the key
-cannot be committed to a code repository by accident.
+- **Claude (claude.ai):** Settings → Integrations → Add custom integration → paste the address above.
+- **Claude Code (CLI):** `claude mcp add -s user --transport http projectboard https://kanboard-gateway-cbfc174dc099.herokuapp.com/api/mcp`
+- **Other MCP-capable assistants:** use HTTP transport, the address above, and no authentication header.
 
-Other MCP-capable assistants work too. They need the same three things: the address
-`https://kanboard-dc2835c6a332.herokuapp.com/api/mcp`, the transport type **HTTP**, and the
-header `Authorization: Bearer <YOUR-API-KEY>`.
+### Step 2 — sign in
 
-## Step 3 — restart and try it
+Your assistant will open a sign-in page. Enter the email address your board invite was sent to
+and click **Send link**. An email will arrive with a sign-in link — click it once, and you will
+land back at a consent screen.
 
-Restart your assistant so it picks up the new connection, then ask it something like
-*"what's on my project board?"* If it answers with your real columns and cards, you're done.
+No password, no API key. The email just confirms you are who you say you are.
+
+### Step 3 — allow access
+
+On the consent screen, click **Allow**. Your assistant will then have access to your board. Ask
+it something like *"what's on my project board?"* and it will answer with your real cards and
+columns.
 
 ---
 
 ## If it doesn't work
 
-| What you see | What it means |
+| What you see | What to do |
 |---|---|
-| `401` | The key is wrong, or was revoked. Create a new one. |
-| `403` | You asked it to change something. The connection is read-only. |
-| `500` on the very first try | A board setting is missing. Tell your project contact — it isn't your key. |
-| Nothing appears | The assistant probably wasn't restarted after Step 2. |
+| Sign-in page says "no account for this email" | The email you entered doesn't match your board invite. Use the exact address the invite went to. |
+| Sign-in link says "invalid or expired" | Links expire after a few minutes and can only be clicked once. Go back and request a new one. |
+| Consent page doesn't appear | Close the browser tab and try adding the connector again from Step 1. |
+| `403` after connecting | You asked it to change something. The connection is read-only. |
 
 ## What it cannot see
 
@@ -69,7 +65,7 @@ Restart your assistant so it picks up the new connection, then ask it something 
 - The internal planning documents behind a card. Those are your project team's working notes
   and are never exposed through this connection, not even their file names.
 
-## If your key ever leaks
+## If you need to disconnect
 
-Go to **Settings → API**, delete the key, and create a new one. The old key stops working
-immediately. Then update Step 2 with the new key.
+Remove the connector from your assistant's settings. Your board is not affected — nothing
+changes on the board side when you disconnect.
