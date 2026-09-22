@@ -12,9 +12,7 @@ Questions it answers well:
 - What finished this week?
 - Is anything blocked?
 
-**It is read-only.** You can ask the board anything you can already see, but the connection
-cannot create, move, edit or comment on cards. If you try, it politely refuses. Changes to the
-board stay with your project team, exactly as they do today.
+**It respects your board permissions exactly.** What you can do in the browser is what the connection can do, nothing more. If your role is view-only, the connection reads only. If you can comment or edit cards, the connection can too.
 
 ---
 
@@ -37,7 +35,7 @@ There is no API key field. Leave any key or token field blank.
 ### Step 2 — sign in
 
 Your assistant will open a sign-in page. Enter the email address your board invite was sent to
-and click **Send link**. An email will arrive with a sign-in link — click it once, and you will
+and click **Send link**. An email will arrive with a sign-in link. Click it once and you will
 land back at a consent screen.
 
 No password, no API key. The email just confirms you are who you say you are.
@@ -59,13 +57,7 @@ columns.
 | Consent page doesn't appear | Close the browser tab and try adding the connector again from Step 1. |
 | `403` after connecting | You asked it to change something. The connection is read-only. |
 
-## What it cannot see
-
-- Any workspace you are not a member of. You see your project, and nothing else.
-- The internal planning documents behind a card. Those are your project team's working notes
-  and are never exposed through this connection, not even their file names.
-
 ## If you need to disconnect
 
-Remove the connector from your assistant's settings. Your board is not affected — nothing
+Remove the connector from your assistant's settings. Your board is not affected, nothing
 changes on the board side when you disconnect.
