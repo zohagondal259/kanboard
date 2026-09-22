@@ -50,6 +50,7 @@ interface FormValues {
 
 export function CardRightPanel({ isTemplate }: { isTemplate?: boolean }) {
   const router = useRouter();
+  const { openModal } = useModal();
   const { canEditCard } = usePermissions();
   const { data: session } = authClient.useSession();
   const cardId = Array.isArray(router.query.cardId)
@@ -160,6 +161,20 @@ export function CardRightPanel({ isTemplate }: { isTemplate?: boolean }) {
           disabled={!canEdit}
         />
       </div>
+      {canEdit && (
+        <div className="mb-4 flex w-full flex-row">
+          <p className="my-2 mb-2 w-[100px] text-sm font-medium">{t`Checklist`}</p>
+          <div className="flex flex-1 items-center">
+            <button
+              onClick={() => openModal("ADD_CHECKLIST")}
+              className="flex items-center gap-1 rounded-md px-2 py-1.5 text-sm text-light-700 hover:bg-light-100 dark:text-dark-700 dark:hover:bg-dark-100"
+            >
+              <span className="text-base leading-none">+</span>
+              <span>{t`Add checklist`}</span>
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
