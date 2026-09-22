@@ -174,6 +174,15 @@ export function AttachmentThumbnails({
               }}
               onClick={() => openViewer(index)}
               isImage={true}
+              onDelete={
+                isReadOnly
+                  ? undefined
+                  : () => {
+                      deleteAttachment.mutate({
+                        attachmentPublicId: attachment.publicId,
+                      });
+                    }
+              }
             />
           );
         })}
@@ -369,6 +378,7 @@ function AttachmentThumbnail({
   attachment,
   onClick,
   isImage,
+  onDelete,
 }: {
   attachment: {
     publicId: string;
@@ -378,27 +388,42 @@ function AttachmentThumbnail({
   };
   onClick: () => void;
   isImage: boolean;
+  onDelete?: () => void;
 }) {
   return (
-    <button
-      onClick={onClick}
-      className="relative h-16 w-16 overflow-hidden rounded-xl border border-light-300 transition-transform hover:scale-105 dark:border-dark-300"
-      aria-label={`View ${attachment.originalFilename}`}
-    >
-      {isImage ? (
-        <Image
-          src={attachment.url}
-          alt={attachment.originalFilename}
-          fill
-          className="object-cover"
-          sizes="64px"
-        />
-      ) : (
-        <div className="flex h-full w-full items-center justify-center bg-light-100 dark:bg-dark-100">
-          <HiDocumentText className="h-6 w-6 text-light-700 dark:text-dark-700" />
-        </div>
+    <div className="group relative h-16 w-16">
+      <button
+        onClick={onClick}
+        className="h-full w-full overflow-hidden rounded-xl border border-light-300 transition-transform hover:scale-105 dark:border-dark-300"
+        aria-label={`View ${attachment.originalFilename}`}
+      >
+        {isImage ? (
+          <Image
+            src={attachment.url}
+            alt={attachment.originalFilename}
+            fill
+            className="object-cover"
+            sizes="64px"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center bg-light-100 dark:bg-dark-100">
+            <HiDocumentText className="h-6 w-6 text-light-700 dark:text-dark-700" />
+          </div>
+        )}
+      </button>
+      {onDelete && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onDelete();
+          }}
+          className="absolute right-0.5 top-0.5 rounded-full bg-black/60 p-0.5 text-white opacity-0 transition-opacity group-hover:opacity-100 focus:outline-none"
+          aria-label={`Delete ${attachment.originalFilename}`}
+        >
+          <HiOutlineTrash className="h-3 w-3" />
+        </button>
       )}
-    </button>
+    </div>
   );
 }
 
