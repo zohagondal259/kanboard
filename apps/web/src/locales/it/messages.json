@@ -60,7 +60,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        327
+        342
       ]
     ],
     "translation": "{0} | {1}"
@@ -341,7 +341,7 @@
     "origin": [
       [
         "src/components/SettingsLayout.tsx",
-        41
+        45
       ]
     ],
     "translation": "Account"
@@ -433,7 +433,7 @@
     "origin": [
       [
         "src/views/card/index.tsx",
-        485
+        500
       ],
       [
         "src/views/public/board/CardModal.tsx",
@@ -524,12 +524,12 @@
     "comments": [],
     "origin": [
       [
-        "src/views/card/components/AttachmentUpload.tsx",
-        125
-      ],
-      [
         "src/views/card/components/Dropdown.tsx",
         123
+      ],
+      [
+        "src/views/card/index.tsx",
+        173
       ]
     ],
     "translation": "Aggiungi checklist"
@@ -569,7 +569,7 @@
     "origin": [
       [
         "src/components/Editor.tsx",
-        499
+        500
       ]
     ],
     "translation": "Aggiungi descrizione... (digita '/' per aprire i comandi o '@' per menzionare)"
@@ -1068,7 +1068,7 @@
     "origin": [
       [
         "src/components/SettingsLayout.tsx",
-        65
+        69
       ],
       [
         "src/views/pricing/components/FeatureComparisonTable.tsx",
@@ -1372,7 +1372,7 @@
     "origin": [
       [
         "src/views/card/components/AttachmentUpload.tsx",
-        45
+        42
       ]
     ],
     "translation": "Allegato caricato"
@@ -1571,7 +1571,7 @@
     "origin": [
       [
         "src/components/SettingsLayout.tsx",
-        58
+        62
       ],
       [
         "src/views/boards/components/TemplateBoards.tsx",
@@ -1619,7 +1619,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        327
+        342
       ],
       [
         "src/views/public/board/index.tsx",
@@ -1832,7 +1832,7 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        98
+        101
       ],
       [
         "src/views/boards/index.tsx",
@@ -2392,7 +2392,7 @@
     "origin": [
       [
         "src/views/card/index.tsx",
-        327
+        342
       ]
     ],
     "translation": "Card"
@@ -2444,11 +2444,11 @@
     "origin": [
       [
         "src/views/card/index.tsx",
-        390
+        405
       ],
       [
         "src/views/card/index.tsx",
-        427
+        442
       ]
     ],
     "translation": "Card non trovata"
@@ -2588,7 +2588,7 @@
       ],
       [
         "src/views/auth/login/index.tsx",
-        43
+        54
       ],
       [
         "src/views/auth/signup/index.tsx",
@@ -2596,6 +2596,18 @@
       ]
     ],
     "translation": "Controlla la tua casella di posta"
+  },
+  "ANtE4t": {
+    "translation": "",
+    "message": "Checklist",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/card/index.tsx",
+        166
+      ]
+    ]
   },
   "GnRmu4": {
     "message": "Checklist name",
@@ -2716,7 +2728,7 @@
     "origin": [
       [
         "src/views/auth/login/index.tsx",
-        48
+        59
       ],
       [
         "src/views/auth/signup/index.tsx",
@@ -2748,7 +2760,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        381
+        396
       ],
       [
         "src/views/members/components/EditMemberPermissionsModal.tsx",
@@ -4184,7 +4196,7 @@
     "origin": [
       [
         "src/views/auth/login/index.tsx",
-        63
+        79
       ]
     ],
     "translation": "Non hai un account? <0><1>Registrati</1></0>"
@@ -4260,7 +4272,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        155
+        156
       ]
     ],
     "translation": "Data di scadenza"
@@ -5134,7 +5146,7 @@
     "origin": [
       [
         "src/views/card/components/AttachmentUpload.tsx",
-        52
+        49
       ]
     ],
     "translation": "Impossibile caricare l'allegato. Riprova."
@@ -5642,7 +5654,7 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        106
+        109
       ],
       [
         "src/pages/404.tsx",
@@ -5670,7 +5682,7 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        130
+        133
       ]
     ],
     "translation": "Vai ai membri"
@@ -5682,7 +5694,7 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        142
+        145
       ]
     ],
     "translation": "Vai alle impostazioni"
@@ -5694,7 +5706,7 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        118
+        121
       ]
     ],
     "translation": "Vai ai modelli"
@@ -6106,7 +6118,7 @@
     "origin": [
       [
         "src/components/SettingsLayout.tsx",
-        77
+        81
       ],
       [
         "src/views/home/components/Features.tsx",
@@ -6396,7 +6408,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        135
+        136
       ]
     ],
     "translation": "Etichette"
@@ -6630,7 +6642,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        126
+        127
       ]
     ],
     "translation": "Lista"
@@ -6734,7 +6746,7 @@
     "origin": [
       [
         "src/views/auth/login/index.tsx",
-        33
+        44
       ]
     ],
     "translation": "Accedi | kan.bn"
@@ -6954,7 +6966,7 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        122
+        125
       ],
       [
         "src/views/board/components/Filters.tsx",
@@ -6970,7 +6982,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        145
+        146
       ],
       [
         "src/views/members/index.tsx",
@@ -8073,7 +8085,7 @@
     "origin": [
       [
         "src/components/SettingsLayout.tsx",
-        53
+        57
       ]
     ],
     "translation": "Permessi"
@@ -8429,11 +8441,11 @@
       ],
       [
         "src/views/card/index.tsx",
-        242
+        257
       ],
       [
         "src/views/card/index.tsx",
-        255
+        270
       ],
       [
         "src/views/members/components/DeleteMemberConfirmation.tsx",
@@ -9610,11 +9622,11 @@
     "origin": [
       [
         "src/components/SettingsLayout.tsx",
-        102
+        106
       ],
       [
         "src/components/SideNavigation.tsx",
-        134
+        137
       ]
     ],
     "translation": "Impostazioni"
@@ -10034,15 +10046,15 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        235
+        238
       ],
       [
         "src/components/SideNavigation.tsx",
-        236
+        239
       ],
       [
         "src/components/SideNavigation.tsx",
-        246
+        249
       ]
     ],
     "translation": "Inizia prova gratuita"
@@ -10323,7 +10335,7 @@
     "origin": [
       [
         "src/components/SideNavigation.tsx",
-        110
+        113
       ],
       [
         "src/views/boards/index.tsx",
@@ -10447,6 +10459,18 @@
       ]
     ],
     "translation": "Impossibile trovare quella chiave di licenza. Contatta l'assistenza."
+  },
+  "3qI/yy": {
+    "translation": "",
+    "message": "That sign-in link didn't work. Request a new one below.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/auth/login/index.tsx",
+        30
+      ]
+    ]
   },
   "NcFrgC": {
     "message": "The board has been archived.",
@@ -10671,6 +10695,18 @@
     ],
     "translation": "Tema"
   },
+  "gmhsp/": {
+    "translation": "",
+    "message": "There's no account for this email address. Ask for an invite, then sign in with the address it was sent to.",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/auth/login/index.tsx",
+        28
+      ]
+    ]
+  },
   "Yf9FAx": {
     "message": "They won't be able to access this workspace.",
     "placeholders": {},
@@ -10868,7 +10904,6 @@
     "translation": "Questo workspace ha raggiunto il limite di membri. Il proprietario del workspace dovrà aggiornare il proprio piano."
   },
   "9Mk/pA": {
-    "translation": "",
     "message": "This workspace may not show plan docs from that folder.",
     "placeholders": {},
     "comments": [],
@@ -10877,7 +10912,8 @@
         "src/views/card/components/PlanDocPanel.tsx",
         19
       ]
-    ]
+    ],
+    "translation": ""
   },
   "duf3Nr": {
     "message": "This workspace URL has already been taken",
@@ -11110,7 +11146,7 @@
     "origin": [
       [
         "src/views/card/index.tsx",
-        254
+        269
       ]
     ],
     "translation": "Impossibile aggiungere l'etichetta"
@@ -11502,7 +11538,7 @@
       ],
       [
         "src/views/card/index.tsx",
-        241
+        256
       ]
     ],
     "translation": "Impossibile aggiornare la card"
@@ -12063,7 +12099,7 @@
     "origin": [
       [
         "src/views/card/components/AttachmentUpload.tsx",
-        51
+        48
       ]
     ],
     "translation": "Caricamento non riuscito"
@@ -12500,7 +12536,7 @@
     "origin": [
       [
         "src/components/SettingsLayout.tsx",
-        71
+        75
       ],
       [
         "src/views/settings/WebhookSettings.tsx",
@@ -12528,7 +12564,7 @@
     "origin": [
       [
         "src/views/auth/login/index.tsx",
-        43
+        54
       ]
     ],
     "translation": "Bentornato"
@@ -12588,7 +12624,7 @@
     "origin": [
       [
         "src/components/SettingsLayout.tsx",
-        47
+        51
       ],
       [
         "src/views/board/index.tsx",
@@ -13204,7 +13240,7 @@
     "origin": [
       [
         "src/views/card/components/AttachmentUpload.tsx",
-        46
+        43
       ]
     ],
     "translation": "Il tuo file è stato caricato con successo."

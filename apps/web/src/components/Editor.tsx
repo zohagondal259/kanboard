@@ -476,6 +476,7 @@ export default function Editor({
 
   const editor = useEditor(
     {
+      immediatelyRender: false,
       extensions: [
         StarterKit.configure({
           heading: disableHeadings ? false : undefined,
