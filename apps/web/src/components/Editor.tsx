@@ -200,7 +200,7 @@ const RenderSuggestions = () => {
     },
     onExit() {
       popup?.[0]?.destroy();
-      reactRenderer.destroy();
+      reactRenderer?.destroy();
     },
   };
 };
@@ -325,7 +325,7 @@ const renderMentionSuggestions = () => {
     },
     onExit() {
       popup?.[0]?.destroy();
-      reactRenderer.destroy();
+      reactRenderer?.destroy();
     },
   };
 };
