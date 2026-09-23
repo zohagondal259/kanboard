@@ -1,4 +1,5 @@
 import { t } from "@lingui/core/macro";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { HiOutlineArrowUp } from "react-icons/hi2";
 
@@ -52,8 +53,10 @@ const NewCommentForm = ({
     });
   };
 
-  const isMac =
-    typeof navigator !== "undefined" && navigator.userAgent.includes("Mac");
+  const [isMac, setIsMac] = useState(false);
+  useEffect(() => {
+    setIsMac(navigator.userAgent.includes("Mac"));
+  }, []);
 
   const submitTooltip = (
     <div className="flex flex-row items-center gap-2 text-[11px]">
