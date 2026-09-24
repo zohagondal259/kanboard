@@ -355,6 +355,7 @@ export const boardRouter = createTRPCRouter({
           {
             members: [],
             labels: [],
+            excludeLabels: [],
             lists: [],
             dueDate: [],
             type: sourceBoardInfo.type,
