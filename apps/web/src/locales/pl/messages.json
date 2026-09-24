@@ -23,23 +23,6 @@
     ],
     "translation": ", lub zobacz nasze"
   },
-  "J/hVSQ": {
-    "message": "{0}",
-    "placeholders": {
-      "0": [
-        "isTemplate ? \"Templates\" : \"Boards\""
-      ]
-    },
-    "comments": [],
-    "origin": [
-      [
-        "src/views/boards/index.tsx",
-        62
-      ]
-    ],
-    "translation": "{0}",
-    "obsolete": true
-  },
   "JArWcF": {
     "message": "{0} | {1}",
     "placeholders": {
@@ -140,7 +123,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        660
+        661
       ]
     ],
     "translation": "{0} nie znaleziono"
@@ -176,19 +159,6 @@
       ]
     ],
     "translation": "{projectCount, plural, one {Importuj projekt (1)} few {Importuj projekty ({projectCount})} many {Importuj projektów ({projectCount})} other {Importuj projekty ({projectCount})}}"
-  },
-  "9lFfqv": {
-    "message": "/month",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/pricing/components/PricingTiers.tsx",
-        207
-      ]
-    ],
-    "translation": "/miesiąc",
-    "obsolete": true
   },
   "h/eDNV": {
     "message": "+ {overflowCount} more",
@@ -557,7 +527,7 @@
       ],
       [
         "src/views/card/components/NewCommentForm.tsx",
-        85
+        88
       ]
     ],
     "translation": "Dodaj komentarz... (wpisz '/' aby otworzyć polecenia lub '@', aby wspomnieć)"
@@ -923,19 +893,6 @@
       ]
     ],
     "translation": "Wszystkie nadpisania uprawnień członków zostały zresetowane do domyślnych ustawień ról."
-  },
-  "ZAs2NN": {
-    "message": "All Pro features +",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/pricing/components/PricingTiers.tsx",
-        101
-      ]
-    ],
-    "translation": "Wszystkie funkcje wersji Pro +",
-    "obsolete": true
   },
   "UQbwrz": {
     "message": "All systems operational",
@@ -1396,7 +1353,7 @@
     "origin": [
       [
         "src/views/board/components/Filters.tsx",
-        220
+        237
       ],
       [
         "src/views/onboarding/workspace-details/index.tsx",
@@ -1489,45 +1446,6 @@
     ],
     "translation": "Najlepsze dla dużych organizacji z zaawansowanymi potrzebami"
   },
-  "UoSI+i": {
-    "message": "Best for small and growing teams that need collaboration",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/pricing/components/PricingTiers.tsx",
-        53
-      ]
-    ],
-    "translation": "Najlepsze dla małych i rozwijających się zespołów wymagających współpracy",
-    "obsolete": true
-  },
-  "zt/6cS": {
-    "message": "Best for small teams who want to collaborate and move faster together.",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/onboarding/select-plan/index.tsx",
-        91
-      ]
-    ],
-    "translation": "Najlepszy dla małych zespołów, które chcą współpracować i działać szybciej razem.",
-    "obsolete": true
-  },
-  "qaS+1/": {
-    "message": "Best for teams that want to scale without limits",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/pricing/components/PricingTiers.tsx",
-        76
-      ]
-    ],
-    "translation": "Najlepsze dla zespołów, które chcą się rozwijać bez ograniczeń",
-    "obsolete": true
-  },
   "jewQ8W": {
     "message": "Best for teams who want to collaborate and move faster together.",
     "placeholders": {},
@@ -1615,7 +1533,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        632
+        633
       ],
       [
         "src/views/card/index.tsx",
@@ -1627,19 +1545,6 @@
       ]
     ],
     "translation": "Tablica"
-  },
-  "YhvWXb": {
-    "message": "Board analytics",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/settings/components/UpgradeToProConfirmation.tsx",
-        85
-      ]
-    ],
-    "translation": "Analiza tablicy",
-    "obsolete": true
   },
   "i0ZMQl": {
     "message": "Board archived",
@@ -1672,7 +1577,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        650
+        651
       ]
     ],
     "translation": "Nazwa tablicy"
@@ -2484,7 +2389,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        398
+        399
       ],
       [
         "src/views/card/components/Dropdown.tsx",
@@ -2598,7 +2503,6 @@
     "translation": "Sprawdź swoją skrzynkę odbiorczą"
   },
   "ANtE4t": {
-    "translation": "",
     "message": "Checklist",
     "placeholders": {},
     "comments": [],
@@ -2607,7 +2511,8 @@
         "src/views/card/index.tsx",
         166
       ]
-    ]
+    ],
+    "translation": ""
   },
   "GnRmu4": {
     "message": "Checklist name",
@@ -2712,7 +2617,7 @@
     "origin": [
       [
         "src/views/board/components/Filters.tsx",
-        229
+        246
       ]
     ],
     "translation": "Wyczyść filtry"
@@ -2913,19 +2818,6 @@
     ],
     "translation": "ukończono element listy kontrolnej <0>{0}</0>"
   },
-  "tOZp9v": {
-    "message": "Configurable user roles and permissions",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/pricing/components/PricingTiers.tsx",
-        82
-      ]
-    ],
-    "translation": "Konfigurowalne role i uprawnienia użytkowników",
-    "obsolete": true
-  },
   "t0dTPm": {
     "message": "Configure webhooks to receive notifications when cards are created, updated, moved, or deleted.",
     "placeholders": {},
@@ -2949,19 +2841,6 @@
       ]
     ],
     "translation": "Skonfiguruj, które działania są dozwolone dla każdej roli w przestrzeni roboczej. Te uprawnienia dotyczą wszystkich członków z tą rolą."
-  },
-  "86XI28": {
-    "message": "Confirm your email preferences:",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/pages/unsubscribe/index.tsx",
-        81
-      ]
-    ],
-    "translation": "Potwierdź swoje preferencje dotyczące e-maili:",
-    "obsolete": true
   },
   "479pdJ": {
     "message": "Confirm your new password",
@@ -3174,19 +3053,6 @@
       ]
     ],
     "translation": "Konwertuj na link"
-  },
-  "5RkSzq": {
-    "message": "Copy board link",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/board/components/UpdateBoardSlugButton.tsx",
-        87
-      ]
-    ],
-    "translation": "Kopiuj link do tablicy",
-    "obsolete": true
   },
   "F0YmUY": {
     "message": "Copy card link",
@@ -3439,7 +3305,7 @@
       ],
       [
         "src/views/board/index.tsx",
-        785
+        786
       ]
     ],
     "translation": "Utwórz nową listę"
@@ -3576,23 +3442,6 @@
     ],
     "translation": "Niestandardowe szablony tablic"
   },
-  "A42Dqn": {
-    "message": "Custom branding",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/pricing/components/FeatureComparisonTable.tsx",
-        172
-      ],
-      [
-        "src/views/pricing/components/PricingTiers.tsx",
-        83
-      ]
-    ],
-    "translation": "Niestandardowy branding",
-    "obsolete": true
-  },
   "GAD3Dx": {
     "message": "Custom domain",
     "placeholders": {},
@@ -3629,19 +3478,6 @@
     ],
     "translation": "Niestandardowy SLA"
   },
-  "u2+JIh": {
-    "message": "Custom URLs require upgrading to a Pro plan",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/components/NewWorkspaceForm.tsx",
-        283
-      ]
-    ],
-    "translation": "Własne adresy URL wymagają przejścia na plan Pro",
-    "obsolete": true
-  },
   "7RpHg/": {
     "message": "Custom username",
     "placeholders": {},
@@ -3658,19 +3494,6 @@
     ],
     "translation": "Niestandardowa nazwa użytkownika"
   },
-  "ZDPJBc": {
-    "message": "Custom usernames require upgrading to a Pro plan",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/onboarding/workspace-details/index.tsx",
-        241
-      ]
-    ],
-    "translation": "Niestandardowe nazwy użytkownika wymagają uaktualnienia do planu Pro",
-    "obsolete": true
-  },
   "5Y8Qur": {
     "message": "Custom usernames require upgrading to a Team plan",
     "placeholders": {},
@@ -3682,19 +3505,6 @@
       ]
     ],
     "translation": "Niestandardowe nazwy użytkowników wymagają uaktualnienia do planu Team"
-  },
-  "j9IZZ0": {
-    "message": "Custom workspace URL",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/settings/components/UpgradeToProConfirmation.tsx",
-        78
-      ]
-    ],
-    "translation": "Niestandardowy adres URL workspace",
-    "obsolete": true
   },
   "OwneeH": {
     "message": "Custom workspace username",
@@ -4120,19 +3930,6 @@
     ],
     "translation": "Czy oferujecie darmowy plan?"
   },
-  "jDRt4n": {
-    "message": "Do you want to unsubscribe?",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/pages/unsubscribe/index.tsx",
-        78
-      ]
-    ],
-    "translation": "Czy chcesz zrezygnować z subskrypcji?",
-    "obsolete": true
-  },
   "JyXBgS": {
     "message": "docs",
     "placeholders": {},
@@ -4264,7 +4061,7 @@
     "origin": [
       [
         "src/views/board/components/Filters.tsx",
-        178
+        195
       ],
       [
         "src/views/board/components/NewCardForm.tsx",
@@ -4284,7 +4081,7 @@
     "origin": [
       [
         "src/views/board/components/Filters.tsx",
-        129
+        138
       ]
     ],
     "translation": "Termin w przyszłym miesiącu"
@@ -4296,7 +4093,7 @@
     "origin": [
       [
         "src/views/board/components/Filters.tsx",
-        124
+        133
       ]
     ],
     "translation": "Termin w przyszłym tygodniu"
@@ -4308,7 +4105,7 @@
     "origin": [
       [
         "src/views/board/components/Filters.tsx",
-        114
+        123
       ]
     ],
     "translation": "Termin dzisiaj"
@@ -4320,7 +4117,7 @@
     "origin": [
       [
         "src/views/board/components/Filters.tsx",
-        119
+        128
       ]
     ],
     "translation": "Termin jutro"
@@ -4913,32 +4710,6 @@
     ],
     "translation": "Błąd podczas aktualizacji adresu URL przestrzeni roboczej"
   },
-  "YaZDYI": {
-    "message": "Error upgrading subscription",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/settings/components/UpgradeToProConfirmation.tsx",
-        43
-      ]
-    ],
-    "translation": "Błąd podczas aktualizacji subskrypcji",
-    "obsolete": true
-  },
-  "lsgnzd": {
-    "message": "Error upgrading to Pro",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/components/NewWorkspaceForm.tsx",
-        146
-      ]
-    ],
-    "translation": "Błąd podczas aktualizacji do wersji Pro",
-    "obsolete": true
-  },
   "CYWHT+": {
     "message": "Error uploading profile image",
     "placeholders": {},
@@ -4994,6 +4765,18 @@
       ]
     ],
     "translation": "Wszystko, czego potrzebujesz, za darmo na zawsze. Nielimitowane tablice, nielimitowane listy, nielimitowane karty. Możesz uaktualnić w dowolnym momencie."
+  },
+  "zKKMu4": {
+    "translation": "",
+    "message": "Exclude labels",
+    "placeholders": {},
+    "comments": [],
+    "origin": [
+      [
+        "src/views/board/components/Filters.tsx",
+        177
+      ]
+    ]
   },
   "t+R8+P": {
     "message": "Execution",
@@ -5282,7 +5065,7 @@
     "origin": [
       [
         "src/views/board/components/Filters.tsx",
-        237
+        254
       ]
     ],
     "translation": "Filtruj"
@@ -5526,7 +5309,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        767
+        768
       ]
     ],
     "translation": "Rozpocznij, tworząc nową listę"
@@ -6255,19 +6038,6 @@
     ],
     "translation": "Zaproś członka"
   },
-  "M2zwdn": {
-    "message": "Inviting members requires a Team or Pro plan. You'll be redirected to upgrade your workspace.",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/members/components/InviteMemberForm.tsx",
-        329
-      ]
-    ],
-    "translation": "Zapraszanie członków wymaga planu Team lub Pro. Zostaniesz przekierowany do ulepszenia przestrzeni roboczej.",
-    "obsolete": true
-  },
   "7tEnCk": {
     "message": "Inviting members requires a Team plan. You'll be redirected to upgrade your workspace.",
     "placeholders": {},
@@ -6279,19 +6049,6 @@
       ]
     ],
     "translation": "Zapraszanie członków wymaga planu Team. Zostaniesz przekierowany, aby ulepszyć swój obszar roboczy."
-  },
-  "qPP4lD": {
-    "message": "Inviting members requires a Team Plan. You'll be redirected to upgrade your workspace.",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/members/components/InviteMemberForm.tsx",
-        336
-      ]
-    ],
-    "translation": "Zapraszanie członków wymaga planu Team. Zostaniesz przekierowany(-a) do aktualizacji workspace.",
-    "obsolete": true
   },
   "c9AJhn": {
     "message": "Join workspace",
@@ -6396,7 +6153,7 @@
       ],
       [
         "src/views/board/components/Filters.tsx",
-        160
+        170
       ],
       [
         "src/views/board/components/NewCardForm.tsx",
@@ -6460,32 +6217,6 @@
       ]
     ],
     "translation": "Duży"
-  },
-  "8Is1ih": {
-    "message": "Launch offer",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/pricing/components/PricingTiers.tsx",
-        159
-      ]
-    ],
-    "translation": "Oferta na start",
-    "obsolete": true
-  },
-  "EEHmPC": {
-    "message": "Launch offer: Get unlimited members with Pro",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/members/index.tsx",
-        276
-      ]
-    ],
-    "translation": "Oferta na start: nielimitowana liczba członków z Pro",
-    "obsolete": true
   },
   "sDuhfK": {
     "message": "Launch offer: unlimited seats for just $29/month with Pro",
@@ -6602,7 +6333,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        396
+        397
       ],
       [
         "src/views/card/components/Dropdown.tsx",
@@ -6682,7 +6413,7 @@
     "origin": [
       [
         "src/views/board/components/Filters.tsx",
-        169
+        186
       ],
       [
         "src/views/board/components/ViewToggle.tsx",
@@ -6970,7 +6701,7 @@
       ],
       [
         "src/views/board/components/Filters.tsx",
-        151
+        161
       ],
       [
         "src/views/board/components/NewCardForm.tsx",
@@ -7337,7 +7068,7 @@
       ],
       [
         "src/views/board/index.tsx",
-        712
+        713
       ]
     ],
     "translation": "Nowa lista"
@@ -7533,7 +7264,7 @@
     "origin": [
       [
         "src/views/board/components/Filters.tsx",
-        134
+        143
       ]
     ],
     "translation": "Brak dat"
@@ -7581,7 +7312,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        763
+        764
       ]
     ],
     "translation": "Brak list"
@@ -7593,7 +7324,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        768
+        769
       ]
     ],
     "translation": "Nie utworzono jeszcze żadnych list"
@@ -7829,7 +7560,7 @@
     "origin": [
       [
         "src/views/board/components/Filters.tsx",
-        109
+        118
       ]
     ],
     "translation": "Zaległe"
@@ -8357,15 +8088,15 @@
       ],
       [
         "src/views/board/index.tsx",
-        257
+        258
       ],
       [
         "src/views/board/index.tsx",
-        313
+        314
       ],
       [
         "src/views/board/index.tsx",
-        350
+        351
       ],
       [
         "src/views/boards/components/ImportBoardsForm.tsx",
@@ -8437,7 +8168,7 @@
       ],
       [
         "src/views/card/components/NewCommentForm.tsx",
-        38
+        39
       ],
       [
         "src/views/card/index.tsx",
@@ -8545,7 +8276,7 @@
       ],
       [
         "src/views/board/index.tsx",
-        405
+        406
       ],
       [
         "src/views/card/components/Dropdown.tsx",
@@ -8669,27 +8400,6 @@
       ]
     ],
     "translation": "Prywatne"
-  },
-  "3fPjUY": {
-    "message": "Pro",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/onboarding/select-plan/index.tsx",
-        96
-      ],
-      [
-        "src/views/pricing/components/FeatureComparisonTable.tsx",
-        333
-      ],
-      [
-        "src/views/pricing/components/PricingTiers.tsx",
-        70
-      ]
-    ],
-    "translation": "Pro",
-    "obsolete": true
   },
   "oyRjD/": {
     "message": "Pro Plan",
@@ -9181,19 +8891,6 @@
       ]
     ],
     "translation": "Zaktualizowano rolę"
-  },
-  "RzxgOE": {
-    "message": "Roles & permissions",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/pricing/components/FeatureComparisonTable.tsx",
-        164
-      ]
-    ],
-    "translation": "Role i uprawnienia",
-    "obsolete": true
   },
   "vAR/I8": {
     "message": "Run on your own infrastructure",
@@ -10026,19 +9723,6 @@
     ],
     "translation": "Daj gwiazdkę na Githubie"
   },
-  "veIDCY": {
-    "message": "Start 14 day free trial",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/settings/components/UpgradeToProConfirmation.tsx",
-        113
-      ]
-    ],
-    "translation": "Rozpocznij 14-dniowy bezpłatny okres próbny",
-    "obsolete": true
-  },
   "4+JaWo": {
     "message": "Start free trial",
     "placeholders": {},
@@ -10102,7 +9786,7 @@
     "origin": [
       [
         "src/views/card/components/NewCommentForm.tsx",
-        60
+        63
       ]
     ],
     "translation": "Prześlij"
@@ -10114,7 +9798,7 @@
     "origin": [
       [
         "src/views/card/components/NewCommentForm.tsx",
-        92
+        95
       ]
     ],
     "translation": "Wyślij komentarz"
@@ -10158,19 +9842,6 @@
       ]
     ],
     "translation": "Niedziela"
-  },
-  "uZg2+w": {
-    "message": "Supercharge your workspace for just $29/month. Here's what you'll get:",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/settings/components/UpgradeToProConfirmation.tsx",
-        59
-      ]
-    ],
-    "translation": "Ulepsz swoje środowisko pracy za jedyne 29$/miesiąc. Oto co otrzymasz:",
-    "obsolete": true
   },
   "XYLcNv": {
     "message": "Support",
@@ -10271,11 +9942,11 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        632
+        633
       ],
       [
         "src/views/board/index.tsx",
-        669
+        670
       ]
     ],
     "translation": "Szablon"
@@ -10461,7 +10132,6 @@
     "translation": "Nie można znaleźć tego klucza licencyjnego. Skontaktuj się z pomocą techniczną."
   },
   "3qI/yy": {
-    "translation": "",
     "message": "That sign-in link didn't work. Request a new one below.",
     "placeholders": {},
     "comments": [],
@@ -10470,7 +10140,8 @@
         "src/views/auth/login/index.tsx",
         30
       ]
-    ]
+    ],
+    "translation": ""
   },
   "NcFrgC": {
     "message": "The board has been archived.",
@@ -10696,7 +10367,6 @@
     "translation": "Motyw"
   },
   "gmhsp/": {
-    "translation": "",
     "message": "There's no account for this email address. Ask for an invite, then sign in with the address it was sent to.",
     "placeholders": {},
     "comments": [],
@@ -10705,7 +10375,8 @@
         "src/views/auth/login/index.tsx",
         28
       ]
-    ]
+    ],
+    "translation": ""
   },
   "Yf9FAx": {
     "message": "They won't be able to access this workspace.",
@@ -11134,7 +10805,7 @@
     "origin": [
       [
         "src/views/card/components/NewCommentForm.tsx",
-        37
+        38
       ]
     ],
     "translation": "Nie można dodać komentarza"
@@ -11182,7 +10853,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        403
+        404
       ],
       [
         "src/views/card/components/Dropdown.tsx",
@@ -11534,7 +11205,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        312
+        313
       ],
       [
         "src/views/card/index.tsx",
@@ -11586,7 +11257,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        349
+        350
       ],
       [
         "src/views/card/components/DueDateSelector.tsx",
@@ -11614,7 +11285,7 @@
     "origin": [
       [
         "src/views/board/index.tsx",
-        256
+        257
       ],
       [
         "src/views/card/components/ListSelector.tsx",
@@ -11863,19 +11534,6 @@
     ],
     "translation": "Nielimitowani członkowie"
   },
-  "8AwlaR": {
-    "message": "Unlimited members and a custom workspace username for teams ready to scale.",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/onboarding/select-plan/index.tsx",
-        99
-      ]
-    ],
-    "translation": "Nieograniczona liczba członków i niestandardowa nazwa użytkownika przestrzeni roboczej dla zespołów gotowych do rozwoju.",
-    "obsolete": true
-  },
   "i5yNAO": {
     "message": "Unlimited seats",
     "placeholders": {},
@@ -11888,19 +11546,6 @@
     ],
     "translation": "Nielimitowane miejsca"
   },
-  "Ws+3X+": {
-    "message": "Unlimited seats and advanced features for growing teams.",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/pricing/components/PricingTiers.tsx",
-        75
-      ]
-    ],
-    "translation": "Nielimitowane miejsca i zaawansowane funkcje dla rozwijających się zespołów.",
-    "obsolete": true
-  },
   "egi434": {
     "message": "Unlink plan doc",
     "placeholders": {},
@@ -11912,23 +11557,6 @@
       ]
     ],
     "translation": ""
-  },
-  "SMaFdc": {
-    "message": "Unsubscribe",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/pages/unsubscribe/index.tsx",
-        68
-      ],
-      [
-        "src/pages/unsubscribe/index.tsx",
-        93
-      ]
-    ],
-    "translation": "Anuluj subskrypcję",
-    "obsolete": true
   },
   "EkH9pt": {
     "message": "Update",
@@ -12053,32 +11681,6 @@
       ]
     ],
     "translation": "Uaktualnij"
-  },
-  "IelE1h": {
-    "message": "Upgrade to Pro",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/settings/components/UpgradeToProConfirmation.tsx",
-        55
-      ]
-    ],
-    "translation": "Ulepsz do Pro",
-    "obsolete": true
-  },
-  "cWtfn1": {
-    "message": "Upgrade to Pro ($29/month)",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/onboarding/workspace-details/index.tsx",
-        265
-      ]
-    ],
-    "translation": "Ulepsz do Pro (29 $/miesiąc)",
-    "obsolete": true
   },
   "21QsyA": {
     "message": "Upgrade your plan",
@@ -12352,19 +11954,6 @@
     ],
     "translation": "Korzystamy z <0>licencji AGPL-3.0</0>."
   },
-  "+EkBs0": {
-    "message": "We couldn't update your preferences. Please try again.",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/pages/unsubscribe/index.tsx",
-        63
-      ]
-    ],
-    "translation": "Nie udało się zaktualizować Twoich preferencji. Spróbuj ponownie.",
-    "obsolete": true
-  },
   "7sdSkl": {
     "message": "We sent a link to {magicLinkRecipient}",
     "placeholders": {
@@ -12628,7 +12217,7 @@
       ],
       [
         "src/views/board/index.tsx",
-        632
+        633
       ],
       [
         "src/views/boards/index.tsx",
@@ -12648,19 +12237,6 @@
       ]
     ],
     "translation": "Przestrzeń robocza"
-  },
-  "LTGE7Y": {
-    "message": "Workspace created successfully. You can upgrade later in settings.",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/components/NewWorkspaceForm.tsx",
-        147
-      ]
-    ],
-    "translation": "Przestrzeń robocza została pomyślnie utworzona. Możesz później przejść na wyższy plan w ustawieniach.",
-    "obsolete": true
   },
   "UlhdTP": {
     "message": "Workspace deleted",
@@ -12950,19 +12526,6 @@
     ],
     "translation": "Zawsze możesz to później zmienić w ustawieniach."
   },
-  "aelko+": {
-    "message": "You can get a custom workspace URL, like <0>kan.bn/kan</0>, by going into your <1>workspace settings</1> and purchasing a pro workspace subscription. All subscriptions help fund the development of the project!",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/home/components/Faqs.tsx",
-        67
-      ]
-    ],
-    "translation": "Możesz uzyskać własny URL przestrzeni roboczej, np. <0>kan.bn/kan</0>, przechodząc do <1>ustawień przestrzeni roboczej</1> i wykupując subskrypcję pro. Wszystkie subskrypcje wspierają rozwój projektu!",
-    "obsolete": true
-  },
   "oRGf3Q": {
     "message": "You can get a custom workspace URL, like <0>kan.bn/kan</0>, by going into your <1>workspace settings</1> and upgrading to a Team workspace subscription. All subscriptions help fund the development of the project!",
     "placeholders": {},
@@ -13038,11 +12601,11 @@
       ],
       [
         "src/views/board/index.tsx",
-        700
+        701
       ],
       [
         "src/views/board/index.tsx",
-        774
+        775
       ],
       [
         "src/views/boards/components/BoardsList.tsx",
@@ -13082,32 +12645,6 @@
       ]
     ],
     "translation": "Rejestracja zakończona sukcesem."
-  },
-  "raHesj": {
-    "message": "You have been unsubscribed!",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/pages/unsubscribe/index.tsx",
-        98
-      ]
-    ],
-    "translation": "Zostałeś wypisany z subskrypcji!",
-    "obsolete": true
-  },
-  "R275Pz": {
-    "message": "You have unlimited seats with your Pro Plan. There is no additional charge for new members!",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/views/members/components/InviteMemberForm.tsx",
-        321
-      ]
-    ],
-    "translation": "W ramach planu Pro masz nielimitowaną liczbę miejsc. Nie ma dodatkowych opłat za nowych członków!",
-    "obsolete": true
   },
   "MdN5zD": {
     "message": "You need to be an admin to manage workspace permissions.",
@@ -13376,19 +12913,6 @@
       ]
     ],
     "translation": "Twoje konto Trello jest połączone."
-  },
-  "25fAUC": {
-    "message": "Your unsubscribe link is missing a token. Please open the latest email and try again.",
-    "placeholders": {},
-    "comments": [],
-    "origin": [
-      [
-        "src/pages/unsubscribe/index.tsx",
-        33
-      ]
-    ],
-    "translation": "Twój link do wypisania się nie zawiera tokena. Otwórz najnowszy e-mail i spróbuj ponownie.",
-    "obsolete": true
   },
   "GRAGsB": {
     "message": "Your workspace",

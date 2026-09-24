@@ -169,6 +169,7 @@ export default function BoardPage({ isTemplate }: { isTemplate?: boolean }) {
     boardPublicId: boardId ?? "",
     members: formatToArray(router.query.members),
     labels: formatToArray(router.query.labels),
+    excludeLabels: formatToArray(router.query.excludeLabels),
     lists: formatToArray(router.query.lists),
     ...(semanticFilters.length > 0 && {
       dueDateFilters: semanticFilters,

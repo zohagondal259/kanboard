@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { t } from "@lingui/core/macro";
 import {
   HiMiniXMark,
+  HiNoSymbol,
   HiOutlineClock,
   HiOutlineSquare3Stack3D,
   HiOutlineTag,
@@ -62,6 +63,7 @@ const Filters = ({
           ...router.query,
           members: [],
           labels: [],
+          excludeLabels: [],
           lists: [],
           dueDate: [],
         },
@@ -94,6 +96,13 @@ const Filters = ({
     key: label.publicId,
     value: label.name,
     selected: !!router.query.labels?.includes(label.publicId),
+    leftIcon: <LabelIcon colourCode={label.colourCode} />,
+  }));
+
+  const formattedExcludeLabels = labels.map((label) => ({
+    key: label.publicId,
+    value: label.name,
+    selected: !!router.query.excludeLabels?.includes(label.publicId),
     leftIcon: <LabelIcon colourCode={label.colourCode} />,
   }));
 
@@ -139,6 +148,7 @@ const Filters = ({
   const filterCounts = {
     members: formatToArray(router.query.members).length,
     labels: formatToArray(router.query.labels).length,
+    excludeLabels: formatToArray(router.query.excludeLabels).length,
     lists: formatToArray(router.query.lists).length,
     dueDate: formatToArray(router.query.dueDate).length,
   };
@@ -161,6 +171,13 @@ const Filters = ({
       icon: <HiOutlineTag size={16} />,
       items: formattedLabels,
       selectedCount: filterCounts.labels,
+    },
+    {
+      key: "excludeLabels",
+      label: t`Exclude labels`,
+      icon: <HiNoSymbol size={16} />,
+      items: formattedExcludeLabels,
+      selectedCount: filterCounts.excludeLabels,
     },
     ...(formattedLists.length
       ? [

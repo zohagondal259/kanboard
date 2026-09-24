@@ -9,6 +9,7 @@ import {
   isNotNull,
   isNull,
   lt,
+  not,
   or,
 } from "drizzle-orm";
 
@@ -153,6 +154,7 @@ export const getByPublicId = async (
   filters: {
     members: string[];
     labels: string[];
+    excludeLabels: string[];
     lists: string[];
     dueDate: DueDateFilter[];
     type: "regular" | "template" | undefined;
@@ -191,6 +193,24 @@ export const getByPublicId = async (
       );
 
     cardIds = filteredCards.map((card) => card.publicId);
+  }
+
+  let excludedCardIds: string[] = [];
+
+  if (filters.excludeLabels.length > 0) {
+    const excludedCards = await db
+      .select({ publicId: cards.publicId })
+      .from(cards)
+      .leftJoin(cardsToLabels, eq(cards.id, cardsToLabels.cardId))
+      .leftJoin(labels, eq(cardsToLabels.labelId, labels.id))
+      .where(
+        and(
+          isNull(cards.deletedAt),
+          inArray(labels.publicId, filters.excludeLabels),
+        ),
+      );
+
+    excludedCardIds = excludedCards.map((card) => card.publicId);
   }
 
   const board = await db.query.boards.findFirst({
@@ -331,6 +351,9 @@ export const getByPublicId = async (
             },
             where: and(
               cardIds.length > 0 ? inArray(cards.publicId, cardIds) : undefined,
+              excludedCardIds.length > 0
+                ? not(inArray(cards.publicId, excludedCardIds))
+                : undefined,
               isNull(cards.deletedAt),
               buildDueDateWhere(filters.dueDate),
             ),
@@ -389,6 +412,7 @@ export const getBySlug = async (
   filters: {
     members: string[];
     labels: string[];
+    excludeLabels: string[];
     lists: string[];
     dueDate: DueDateFilter[];
   },
@@ -413,6 +437,24 @@ export const getBySlug = async (
       );
 
     cardIds = filteredCards.map((card) => card.publicId);
+  }
+
+  let excludedCardIds: string[] = [];
+
+  if (filters.excludeLabels.length > 0) {
+    const excludedCards = await db
+      .select({ publicId: cards.publicId })
+      .from(cards)
+      .leftJoin(cardsToLabels, eq(cards.id, cardsToLabels.cardId))
+      .leftJoin(labels, eq(cardsToLabels.labelId, labels.id))
+      .where(
+        and(
+          isNull(cards.deletedAt),
+          inArray(labels.publicId, filters.excludeLabels),
+        ),
+      );
+
+    excludedCardIds = excludedCards.map((card) => card.publicId);
   }
 
   const board = await db.query.boards.findFirst({
@@ -507,6 +549,9 @@ export const getBySlug = async (
             },
             where: and(
               cardIds.length > 0 ? inArray(cards.publicId, cardIds) : undefined,
+              excludedCardIds.length > 0
+                ? not(inArray(cards.publicId, excludedCardIds))
+                : undefined,
               isNull(cards.deletedAt),
               buildDueDateWhere(filters.dueDate),
             ),
