@@ -122,10 +122,14 @@ export function registerWorkspaceTools(
 
   server.tool(
     "search_workspace",
-    "Search for boards and cards by title within a workspace",
+    "Search for boards by name and cards by title or ticket ID within a workspace",
     {
       workspacePublicId: z.string().describe("The workspace's public ID"),
-      query: z.string().describe("Search query string"),
+      query: z
+        .string()
+        .describe(
+          "Search text, or a ticket ID: in full (AGR-343), its prefix (AGR) or its number (343)",
+        ),
     },
     async ({ workspacePublicId, query }) => {
       const params = new URLSearchParams({ query });

@@ -569,7 +569,7 @@ export const workspaceRouter = createTRPCRouter({
         method: "GET",
         path: "/workspaces/{workspacePublicId}/search",
         description:
-          "Searches for boards and cards by title within a workspace",
+          "Searches boards by name and cards by title or ticket ID within a workspace. A ticket ID can be given in full (AGR-343), as its prefix (AGR) or as its number (343)",
         tags: ["Workspaces"],
         protect: true,
       },

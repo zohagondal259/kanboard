@@ -421,13 +421,7 @@ export const isUserInWorkspace = async (
   return result?.id !== undefined;
 };
 
-const parseTicketId = (
-  query: string,
-): { prefix: string; number: number } | null => {
-  const match = /^([A-Za-z0-9]{1,10})-(\d+)$/.exec(query);
-  if (!match) return null;
-  return { prefix: match[1]!.toUpperCase(), number: parseInt(match[2]!, 10) };
-};
+const FULL_TICKET_ID = /^[A-Za-z0-9]{1,10}-\d+$/;
 
 export const searchBoardsAndCards = async (
   db: dbClient,
@@ -435,9 +429,12 @@ export const searchBoardsAndCards = async (
   query: string,
   limit = 20,
 ) => {
-  const searchQuery = `%${query}%`;
+  const q = query.trim();
+  if (!q) return [];
 
-  const ticketId = parseTicketId(query.trim());
+  const searchQuery = `%${q}%`;
+  const startsWithQuery = `${q}%`;
+  const isFullTicketId = FULL_TICKET_ID.test(q);
 
   // Search for boards
   const boardResults = await db
@@ -455,39 +452,23 @@ export const searchBoardsAndCards = async (
         eq(boards.workspaceId, workspaceId),
         // Combine exact and fuzzy matching
         or(
-          ilike(boards.name, `%${query}%`), // Exact substring match
-          sql`similarity(${boards.name}, ${query}) > 0.2`, // Fuzzy match
+          ilike(boards.name, searchQuery), // Exact substring match
+          sql`similarity(${boards.name}, ${q}) > 0.2`, // Fuzzy match
         ),
         isNull(boards.deletedAt),
       ),
     )
     .orderBy(
-      sql`CASE WHEN ${boards.name} ILIKE ${`%${query}%`} THEN 1 ELSE 0 END DESC`,
-      sql`similarity(${boards.name}, ${query}) DESC`,
+      sql`CASE WHEN ${boards.name} ILIKE ${searchQuery} THEN 1 ELSE 0 END DESC`,
+      sql`similarity(${boards.name}, ${q}) DESC`,
       desc(boards.updatedAt),
     )
-    .limit(ticketId ? 0 : Math.ceil(limit * 0.4));
+    .limit(isFullTicketId ? 0 : Math.ceil(limit * 0.4));
 
-  // Search for cards by ticket ID or by title
-  const cardWhereConditions = ticketId
-    ? and(
-        eq(boards.workspaceId, workspaceId),
-        eq(cards.cardNumber, ticketId.number),
-        ilike(workspaces.cardPrefix, ticketId.prefix),
-        isNull(cards.deletedAt),
-        isNull(lists.deletedAt),
-        isNull(boards.deletedAt),
-      )
-    : and(
-        eq(boards.workspaceId, workspaceId),
-        or(
-          ilike(cards.title, searchQuery),
-          sql`similarity(${cards.title}, ${query}) > 0.2`,
-        ),
-        isNull(cards.deletedAt),
-        isNull(lists.deletedAt),
-        isNull(boards.deletedAt),
-      );
+  // Search for cards by title or ticket ID, so "AGR-343", "AGR" and "343" all match
+  const cardNumberText = sql`${cards.cardNumber}::text`;
+  const ticketText = sql`(${workspaces.cardPrefix} || '-' || ${cardNumberText})`;
+  const ticketMatches = ilike(ticketText, searchQuery);
 
   const cardResults = await db
     .select({
@@ -505,17 +486,33 @@ export const searchBoardsAndCards = async (
     .innerJoin(lists, eq(cards.listId, lists.id))
     .innerJoin(boards, eq(lists.boardId, boards.id))
     .innerJoin(workspaces, eq(boards.workspaceId, workspaces.id))
-    .where(cardWhereConditions)
-    .orderBy(
-      ...(ticketId
-        ? [desc(cards.createdAt)]
-        : [
-            sql`CASE WHEN ${cards.title} ILIKE ${searchQuery} THEN 1 ELSE 0 END DESC`,
-            sql`similarity(${cards.title}, ${query}) DESC`,
-            desc(cards.updatedAt),
-          ]),
+    .where(
+      and(
+        eq(boards.workspaceId, workspaceId),
+        or(
+          ilike(cards.title, searchQuery),
+          sql`similarity(${cards.title}, ${q}) > 0.2`,
+          ticketMatches,
+        ),
+        isNull(cards.deletedAt),
+        isNull(lists.deletedAt),
+        isNull(boards.deletedAt),
+      ),
     )
-    .limit(ticketId ? limit : Math.floor(limit * 0.6));
+    .orderBy(
+      // Rank: exact ticket ID or number, title hit, ID starts with, ID contains, fuzzy title
+      sql`CASE
+        WHEN ${cardNumberText} = ${q} OR lower(${ticketText}) = ${q.toLowerCase()} THEN 0
+        WHEN ${cards.title} ILIKE ${searchQuery} THEN 1
+        WHEN ${cardNumberText} LIKE ${startsWithQuery} OR ${ticketText} ILIKE ${startsWithQuery} THEN 2
+        WHEN ${ticketMatches} THEN 3
+        ELSE 4
+      END`,
+      sql`CASE WHEN ${ticketMatches} THEN 0 ELSE similarity(${cards.title}, ${q}) END DESC`,
+      sql`coalesce(${cards.updatedAt}, ${cards.createdAt}) DESC`,
+      desc(cards.cardNumber),
+    )
+    .limit(isFullTicketId ? limit : Math.floor(limit * 0.6));
 
   // Combine results
   const allResults = [
