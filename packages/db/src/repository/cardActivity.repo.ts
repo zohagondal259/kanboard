@@ -1,4 +1,4 @@
-import { and, asc, count, eq, gt, inArray, isNull, or } from "drizzle-orm";
+import { and, count, desc, eq, inArray, isNull, lt, or } from "drizzle-orm";
 
 import type { dbClient } from "@kan/db/client";
 import type { ActivityType } from "@kan/db/schema";
@@ -135,7 +135,7 @@ export const getPaginatedActivities = async (
     },
     where: and(
       eq(cardActivities.cardId, cardId),
-      cursor ? gt(cardActivities.createdAt, cursor) : undefined,
+      cursor ? lt(cardActivities.createdAt, cursor) : undefined,
       or(
         isNull(cardActivities.commentId),
         inArray(cardActivities.commentId, validCommentIds),
@@ -202,7 +202,7 @@ export const getPaginatedActivities = async (
         },
       },
     },
-    orderBy: asc(cardActivities.createdAt), // required for merging and pagination
+    orderBy: desc(cardActivities.createdAt), // newest first; the cursor pages toward older
     limit: limit + 1, // fetch one extra to check if there are more
   });
 
